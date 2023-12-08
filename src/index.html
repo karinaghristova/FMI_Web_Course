@@ -14,18 +14,65 @@
     <nav id="navbar" class="nav-menu">
         <a class="icon" onclick="navbarIcon()"><i class="fa-solid fa-bars"></i></a>
         <a href="index.html" class="active">Начало</a>
+        <a href="generalInformation.html">Обща информация</a>
         <a href="chartTypes.html">Видове диаграми</a>
         <a href="mistakesAndTips.html">Полезни съвети</a>
     </nav>
     
     <div id="main-container">
         <div id="content">
-            <h1>Какво е Chart.js?</h1>
-            <p>Chart.js е JavaScript библиотека, която предоставя възможност за създаване на интерактивни графики и диаграми в уеб приложенията. Тя е лека, проста за използване и предоставя високо стилизирани графики, които могат бързо да бъдат вградени в уеб страници</p>
+            <div id="introduction_content">
+                <h1>Какво е Chart.js?</h1>
+                <p>Chart.js е популярна JavaScript библиотека с отворен код, която предоставя възможност за създаване на интерактивни графики и диаграми в уеб приложения. Тя е лека, проста за използване и предоставя високо стилизирани графики, които могат бързо да бъдат вградени в уеб страници. Освен това разполага с добре описана документация, която прави работата с нея изключително приятна. Chart.js е съвместима с всички известни JavaСcript библиотеки, като в това число се вклюват React, Vue и Angular.</p>
+            </div>
+            
+            <div id="rendering_content">
+                <h1>Рендериране</h1>
+                <p>За разлика от много други библиотеки, които използват SVG, Chart.js рендерира диаграмите на HTML5 платно, още известно като canvas. Това значително подобрява представянето, особено при използване на големи множества данни и комплексни визуализации.  От друга страна, този начин на рендериране не позволява CSS стилизиране, което налага използването на вградени опции или създаването на персонализирани добавки (plugins), при желание за индивидуална стилизация.</p>
+            </div>
+
+            <div id="installation_content">
+                <h1>Как да си инсталираме Chart.js?</h1>
+                <ul>
+                    <li>
+                        <h3>Мениджър за Пакети Node - npm</h3>
+                        <p>Първият начин, по който можем да инсталираме библиотеката Chart.js, е чрез мениджъра за пакети Node, като използваме командата <span class="bolded">npm install chart.js</span></p>
+                    </li>
+                    <li>
+                        <h3>Мрежа за доставка на съдържание - CDN</h3>
+                        <p>Можем също така да използваме мрежа за доставка на съдържание, още известна като CDN. Необходимият линк може да бъде намерен <a href="https://cdnjs.com/libraries/Chart.js" class="bolded">тук</a></p>
+                    </li>
+                    <li>
+                        <h3>jsDelivr</h3>
+                        <p>С този подход използваме скриптов елемент в HTML кода. За актуален линк, който се слага в него, може да посетите <a href="https://www.jsdelivr.com/package/npm/chart.js?path=dist" class="bolded">тази страница</a></p>
+                    </li>
+                    <li>
+                        <h3>Гитхъб</h3>
+                        <p>Не на последно място, може да изтеглим <a href="https://github.com/chartjs/Chart.js/releases/tag/v4.4.1" class="bolded">последна версия</a>  на библиотеката Chart.js от Гитхъб. </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="integration_content">
+                <h1>Интеграция</h1>
+                <p>Интегрирането на Chart.js в нашия код може да стане с помощта чист JavaScript или чрез зареждане на модулни компоненти.</p>
+                <div id="integration_examples">
+                    <h3 class="example">Пример за интеграция чрез скрипт (чист JavaScript)</h3>
+                    <div class="code-container">
+                        &lt<span class="html-tag">script </span><span class="html-attribute">src</span>=<span class="html-attribute-value">"path/to/chartjs/dist/chart.umd.js"</span>&gt&lt/<span class="html-tag">script</span>&gt
+                        &lt/<span class="html-tag">script</span>&gt
+                            <span class="html-p-text"> Your code</span>
+                        &lt/<span class="html-tag">script</span>&gt
+                    </div>
+                    
+                    <h3 class="example">Пример за интеграция чрез включване на пакет</h3>
+                    <div class="code-container">
+                        <span class="html-tag">import </span>Chart<span class="html-tag"> from</span><span class="html-attribute-value"> 'chart.js/auto'</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-
 </body>
 
 </html>
