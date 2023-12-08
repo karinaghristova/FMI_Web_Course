@@ -45,7 +45,7 @@ body {
     display: none;
 }
 
-h1{
+h1, h2, h3, h4, h5, h6{
     color: #49274A;
     margin: 10px 0px;
 }
@@ -54,6 +54,48 @@ p{
     font-size: large;
 }
 
+.bolded{
+    font-weight: bold;
+    font-style: italic;
+    color: #94618E;
+}
+
+.example{
+    color: rgb(240, 153, 21);
+}
+
+.anti-example{
+    color:#d33c31 ;
+}
+
+.code-container {
+    text-align: center;
+    background-color: white;
+    padding: 5px;
+    margin: 2px;
+    overflow: auto;
+    width: 80%;
+    border: 0.2rem solid  rgb(61, 59, 59);
+}
+
+.html-tag{
+    font-weight: bold;
+    color: purple;
+}
+
+.html-attribute{
+    font-weight: bold;
+    color: rgb(240, 60, 120);
+}
+
+.html-attribute-value{
+    font-weight: bold;
+    color: rgb(175, 88, 175);
+}
+
+.html-p-text{
+    font-weight: bold;
+}
 @media screen and (max-width: 600px){
     .nav-menu a:not(:first-child) {display: none;}
     .nav-menu a.icon {
