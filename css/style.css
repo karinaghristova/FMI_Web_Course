@@ -1,26 +1,26 @@
 body {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 0;
     padding: 0;
     background-color: #F8EEE7;
     color: black;
 }
 
-#main-container{
+#main-container {
     padding: 5px;
 }
 
-#content{
+#content {
     margin: 5px;
     padding-left: 5px;
 }
 
-.nav-menu{
+.nav-menu {
     overflow: hidden;
     background-color: #94618E;
 }
 
-.nav-menu a{
+.nav-menu a {
     float: left;
     display: block;
     color: white;
@@ -30,90 +30,248 @@ body {
     padding: 10px 10px;
 }
 
-.nav-menu a:hover{
+.nav-menu .active {
+    background-color: #49274A;
+    color: white;
+}
+
+.nav-menu .icon {
+    display: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px 10px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #94618E;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: white;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.nav-menu a:hover,
+.dropdown:hover .dropbtn {
+    background-color: #49274A;
+    color: white;
+}
+
+.dropdown-content a:hover {
     background-color: #49274A;
     border-radius: 20px;
     color: white;
 }
 
-.nav-menu a.active{
-    background-color: #49274A;
-    color:white;
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
-.nav-menu .icon{
-    display: none;
-}
-
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: #49274A;
     margin: 10px 0px;
 }
 
-p{
+p {
     font-size: large;
 }
 
-.bolded{
+.bolded {
     font-weight: bold;
     font-style: italic;
-    color: #94618E;
+    color: #FE6383;
 }
 
-.example{
+.example {
     color: rgb(240, 153, 21);
 }
 
-.anti-example{
-    color:#d33c31 ;
+.anti-example {
+    color: #d33c31;
 }
 
 .code-container {
-    text-align: center;
+    text-align: left;
+    font-size: 15px;
     background-color: white;
     padding: 5px;
     margin: 2px;
     overflow: auto;
     width: 80%;
-    border: 0.2rem solid  rgb(61, 59, 59);
+    border: 0.2rem solid rgb(61, 59, 59);
 }
 
-.html-tag{
+.code-container pre {
+    white-space: pre-line
+}
+
+.code-purple {
     font-weight: bold;
     color: purple;
 }
 
-.html-attribute{
+.code-pink {
     font-weight: bold;
     color: rgb(240, 60, 120);
 }
 
-.html-attribute-value{
+.code-lavender {
     font-weight: bold;
     color: rgb(175, 88, 175);
 }
 
-.html-p-text{
+.code-green {
+    font-weight: bold;
+    color: rgb(121, 193, 33);
+}
+
+.bolded-text {
     font-weight: bold;
 }
-@media screen and (max-width: 600px){
-    .nav-menu a:not(:first-child) {display: none;}
+
+.square-blue {
+    height: 50px;
+    width: 50px;
+    background-color: #36A2EB;
+}
+
+.square-pink {
+    height: 50px;
+    width: 50px;
+    background-color: #FE6383;
+}
+
+.square-green {
+    height: 50px;
+    width: 50px;
+    background-color: #4CC0C0;
+}
+
+.square-orange {
+    height: 50px;
+    width: 50px;
+    background-color: #FF9F40;
+}
+
+.square-purple {
+    height: 50px;
+    width: 50px;
+    background-color: #9966FF;
+}
+
+.square-yellow {
+    height: 50px;
+    width: 50px;
+    background-color: #FFCC56;
+}
+
+.square-grey {
+    height: 50px;
+    width: 50px;
+    background-color: #CACBCF;
+}
+
+#chartjs-default-colors-list p {
+    float: left;
+    display: block;
+    text-decoration: none;
+    margin: 5px;
+    margin-bottom: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 18px;
+}
+
+td,
+th {
+    border: 2px solid #49274A;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:first-child {
+    background-color: rgb(175, 88, 175);
+}
+
+@media screen and (max-width: 600px) {
+    .nav-menu a:not(:first-child), .dropdown .dropbtn {
+        display: none;
+    }
+
     .nav-menu a.icon {
         float: right;
         display: block;
     }
 }
 
-@media screen and (max-width: 600px){
-    .nav-menu.responsive {position: relative;}
-    .nav-menu.responsive .icon {
+@media screen and (max-width: 600px) {
+    .nav-menu a:not(:first-child), .dropdown .dropbtn {
+      display: none;
+    }
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+    .nav-menu.responsive {
+        position: relative;
+    }
+
+    .nav-menu.responsive a.icon {
         position: absolute;
         right: 0;
         top: 0;
     }
-    .nav-menu.responsive a{
+
+    .nav-menu.responsive a {
         float: none;
         display: block;
+        text-align: left;
+    }
+
+    .nav-menu.responsive .dropdown {
+        float: none;
+    }
+
+    .nav-menu.responsive .dropdown-content {
+        position: relative;
+    }
+
+    .nav-menu.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
         text-align: left;
     }
 }
