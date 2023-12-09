@@ -13,8 +13,18 @@
 <body>
     <nav id="navbar" class="nav-menu">
         <a class="icon" onclick="navbarIcon()"><i class="fa-solid fa-bars"></i></a>
-        <a href="index.html" class="active">Начало</a>
-        <a href="generalInformation.html">Обща информация</a>
+        <a href="referat.html" class="active">Начало</a>
+        <div class="dropdown">
+            <button class="dropbtn">Обща информация
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="accessibility.html">Достъпност</a>
+              <a href="colors.html">Цветове</a>
+              <a href="data_structures.html">Данни</a>
+              <a href="fonts.html">Шрифтове</a>
+            </div>
+          </div>
         <a href="chartTypes.html">Видове диаграми</a>
         <a href="mistakesAndTips.html">Полезни съвети</a>
     </nav>
@@ -54,20 +64,23 @@
             </div>
 
             <div id="integration_content">
-                <h1>Интеграция</h1>
+                <h1>Как се интегрира?</h1>
                 <p>Интегрирането на Chart.js в нашия код може да стане с помощта чист JavaScript или чрез зареждане на модулни компоненти.</p>
                 <div id="integration_examples">
                     <h3 class="example">Пример за интеграция чрез скрипт (чист JavaScript)</h3>
                     <div class="code-container">
-                        &lt<span class="html-tag">script </span><span class="html-attribute">src</span>=<span class="html-attribute-value">"path/to/chartjs/dist/chart.umd.js"</span>&gt&lt/<span class="html-tag">script</span>&gt
-                        &lt/<span class="html-tag">script</span>&gt
-                            <span class="html-p-text"> Your code</span>
-                        &lt/<span class="html-tag">script</span>&gt
+                        <pre>
+                            &lt<span class="code-purple">script </span><span class="code-pink">src</span>=<span class="code-lavender">"path/to/chartjs/dist/chart.umd.js"</span>&gt&lt/<span class="code-purple">script</span>&gt
+                            &lt/<span class="code-purple">script</span>&gt
+                                <span class="html-p-text"> Your code</span>
+                            &lt/<span class="code-purple">script</span>&gt
+                        </pre>
+                        
                     </div>
                     
                     <h3 class="example">Пример за интеграция чрез включване на пакет</h3>
                     <div class="code-container">
-                        <span class="html-tag">import </span>Chart<span class="html-tag"> from</span><span class="html-attribute-value"> 'chart.js/auto'</span>
+                        <span class="code-purple">import </span><span class="code-pink">Chart</span><span class="code-purple"> from</span><span class="code-lavender"> 'chart.js/auto'</span>
                     </div>
                 </div>
             </div>
