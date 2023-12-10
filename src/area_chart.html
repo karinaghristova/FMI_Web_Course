@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Chart.js - Diagram Types</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../javascript/functions.js"></script>
+</head>
+
+<body>
+    <nav id="navbar" class="nav-menu">
+        <a class="icon" onclick="navbarIcon()"><i class="fa-solid fa-bars"></i></a>
+        <a href="referat.html">Начало</a>
+        <div class="dropdown">
+            <button class="dropbtn">Обща информация
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="accessibility.html">Достъпност</a>
+                <a href="colors.html">Цветове</a>
+                <a href="data_structures.html">Данни</a>
+                <a href="fonts.html">Шрифтове</a>
+            </div>
+        </div>
+        <a href="chartTypes.html" class="active">Видове диаграми</a>
+        <a href="mistakesAndTips.html">Полезни съвети</a>
+    </nav>
+    <div id="main-container">
+        <div id="content">
+            <div id="chart-types-list">
+                <a class="active" href="area_chart.html" id="area_chart_icon">
+                    <img src="../img/area_chart.png" alt="area_chart_icon">
+                    <p>Площна</p>
+                </a>
+
+                <a href="bar_chart.html" id="bar_chart_icon">
+                    <img src="../img/bar_chart.png" alt="bar_chart_icon">
+                    <p>Колонна</p>
+                </a>
+
+                <a href="bubble_chart.html" id="bubble_chart_icon">
+                    <img src="../img/bubbles_chart.png" alt="bubble_chart_icon">
+                    <p>Балонена</p>
+                </a>
+
+                <a href="doughnut_chart.html" id="doughnut_chart_icon">
+                    <img src="../img/doughnut_chart.png" alt="doughnut_chart_icon">
+                    <p>Донът</p>
+                </a>
+
+                <a href="pie_chart.html" id="pie_chart_icon">
+                    <img src="../img/pie_chart.png" alt="pie_chart_icon">
+                    <p>Пай</p>
+                </a>
+
+                <a href="line_chart.html" id="line_chart_icon">
+                    <img src="../img/line_chart.png" alt="line_chart_icon">
+                    <p>Линейна</p>
+                </a>
+
+                <a href="mixed_chart.html" id="mixed_chart_icon">
+                    <img src="../img/mixed_chart.png" alt="mixed_chart_icon">
+                    <p>Комбинирана</p>
+                </a>
+
+                <a href="polar_area_chart.html" id="polar_area_chart_icon">
+                    <img src="../img/polar_area_chart.png" alt="polar_area_chart_icon">
+                    <p>Полярна</p>
+                </a>
+
+                <a href="radar_chart.html" id="radar_chart_icon">
+                    <img src="../img/radar_chart.png" alt="radar_chart_icon">
+                    <p>Радарна</p>
+                </a>
+
+                <a href="scatter_chart.html" id="scatter_chart_icon">
+                    <img src="../img/scatter_chart.png" alt="scatter_chart_icon">
+                    <p>Точкова</p>
+                </a>
+            </div>
+
+            <div id="area_chart_content">
+                <h1>Площна диаграма</h1>
+                <h2 class="example">Пример</h2>
+                <div class="chart-canva">
+                    <canvas id="areaChartCanva"></canvas>
+                </div>
+
+                <h2>Създаване на данни:</h2>
+                <div class="code-container">
+                    <pre>
+                            <span class="code-purple">var</span> <span class="code-lavender">chartData</span> = {
+                                &emsp;&emsp;<span class="code-pink">labels</span> <span class="code-green">['Слаб', 'Среден', 'Добър', 'Много добър', 'Отличен']</span>,
+                                &emsp;&emsp;<span class="code-pink">datasets</span> [
+                                &emsp;&emsp;&emsp;&emsp;{
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">label</span>: <span class="code-green">'Оценки по Уеб'</span>,
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">[3, 17, 21, 65, 15]</span>,
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">backgroundColor</span>: <span class="code-green">'#94618E'</span>, 
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">borderColor</span>: <span class="code-green">'purple'</span>, 
+                                &emsp;&emsp;
+                                &emsp;&emsp;&emsp;&emsp;}
+                                &emsp;&emsp;&emsp;&emsp;{
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">label</span>: <span class="code-green">'Оценки по ИИ'</span>,
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">[10, 7, 30, 15, 45]</span>,
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">backgroundColor</span>: <span class="code-green">'#FFC0CB'</span>, 
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">borderColor</span>: <span class="code-green">'#F59FAE'</span>, 
+                                &emsp;&emsp;
+                                &emsp;&emsp;&emsp;&emsp;}
+                                &emsp;&emsp;]
+                            };
+                        </pre>
+                </div>
+
+                <h2>Създаване на опции</h2>
+                <div class="code-container">
+                    <pre>
+                            <span class="code-purple">var</span> <span class="code-lavender">chartOptions</span> = {
+                                &emsp;&emsp;<span class="code-pink">scales</span>: {
+                                &emsp;&emsp;&emsp;&emsp;<span class="code-pink">y</span> {
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">beginAtZero</span>: <span class="code-green">true</span>
+                                &emsp;&emsp;&emsp;&emsp;}
+                                &emsp;&emsp;}
+                            };
+                        </pre>
+                </div>
+
+                <h2>Създаване на диаграмата</h2>
+                <div class="code-container">
+                    <pre>
+                            <span class="code-purple">var</span> <span class="code-lavender">areaChart</span> = <span class="code-purple">new</span> <span class="code-lavender">Chart</span>(ctx, {
+                            &emsp;&emsp;<span class="code-pink">type</span>: <span class="code-green">'line'</span>,
+                            &emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">chartData</span>,
+                            &emsp;&emsp;<span class="code-pink">options</span>: <span class="code-green">chartOptions</span>
+                            });
+                        </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../javascript/area_chart.js"></script>
+</body>
+
+</html>
