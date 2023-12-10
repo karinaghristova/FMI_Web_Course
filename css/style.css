@@ -255,6 +255,14 @@ tr:first-child {
     width: 600px;
 }
 
+#mistakes_content h3 {
+    color:#FE6383 ;
+}
+
+#tips_content h3{
+    color:#FE6383 ;
+}
+
 @media screen and (max-width: 600px) {
     .nav-menu a:not(:first-child), .dropdown .dropbtn {
         display: none;
