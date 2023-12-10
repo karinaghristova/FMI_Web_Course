@@ -3,7 +3,7 @@ var ctx = document.getElementById('scatterChartCanva').getContext('2d');
 // Create data
 var chartData = {
     datasets: [{
-        label: 'Scatter Chart Example',
+        label: 'Координати на точки',
         data: [
             { x: 7, y: 15 }, 
             { x: 13, y: 27 }, 
@@ -31,11 +31,6 @@ var chartOptions = {
             position: 'left' 
         }
     },
-    plugins: {
-        legend: {
-            display: false 
-        }
-    }
 };
 
 // Create chart

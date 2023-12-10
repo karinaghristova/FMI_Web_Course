@@ -118,6 +118,15 @@
                     При създаването на комбинирана диаграма е нужно да укажем типа на диаграмата за всяко множество от данни.</p>
                 <p></p>
                 <h2 class="example">Пример</h2>
+                <p>Диаграмата от примера представя информация за джобните, които група (нереални) ученици са изхарчили преди Коледа и след Коледа. За целта се използват две множества от данни.  (данните са измислени)</p>
+                <p><span class="bolded">Етикети</span>: ['Яна', 'Фифо', 'Мирела', 'Алекс', 'Мая']</p>
+                <p><span class="bolded">Етикет на първото множество</span>: 'Изхарчени пари преди Коледа'</p>
+                <p><span class="bolded">Етикет на второто множество</span>: 'Изхарчени пари след Коледа'</p>
+                <p><span class="bolded">Данните на двете множества</span> са както следва:</p>
+                <p><span class="bolded">Данни на първо множество</span>: [30, 50, 20, 40, 60]</p>
+                <p><span class="bolded">Данни на второ множество</span>: [50, 30, 40, 20, 60]</p>
+                <p>Избрани са 2 <span class="bolded">цвята</span> за двете различни множества и е указано в <span class="bolded">опциите</span>, че стойностите на графиката по оста Y трябва да започват от 0, а легендата за диграмата трябва да се намира под нея.</p>
+                <p>Примерен код за създаване на диаграмата може да намерите отдолу</p>
                 <div class="chart-canva">
                     <canvas id="mixedChartCanva"></canvas>
                 </div>
@@ -129,7 +138,7 @@
                             &emsp;&emsp;<span class="code-pink">labels</span> <span class="code-green">['Яна', 'Фифо', 'Мирела', 'Алекс', 'Мая']</span>,
                             &emsp;&emsp;<span class="code-pink">datasets</span> [
                             &emsp;&emsp;&emsp;&emsp;{
-                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">label</span>: <span class="code-green">'Колонно множество от данни'</span>,
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">label</span>: <span class="code-green">'Изхарчени пари преди Коледа'</span>,
                             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">type</span>: <span class="code-green">'bar'</span>,
                             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">[30, 50, 20, 40, 60]</span>,
                             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">backgroundColor</span>: <span class="code-green">'rgba(75, 192, 192, 0.6)'</span>, 
@@ -137,7 +146,7 @@
                             &emsp;&emsp;
                             &emsp;&emsp;&emsp;&emsp;}
                             &emsp;&emsp;&emsp;&emsp;{
-                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">label</span>: <span class="code-green">'Линейно множество от данни'</span>,
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">label</span>: <span class="code-green">'Изхарчени пари след Коледа'</span>,
                             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">type</span>: <span class="code-green">'line'</span>,
                             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">[50, 30, 40, 20, 60]</span>,
                             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">borderColor</span>: <span class="code-green">'rgba(255, 99, 132, 1)'</span>, 

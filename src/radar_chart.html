@@ -116,6 +116,19 @@
                 <p>Чрез този вид диаграми могат да бъдат показани множество от точки с данни и вариациите между тях. 
                     Полезни са, когато се цели сравняване на точки от две или повече различни множества от данни.</p>
                 <h2 class="example">Пример</h2>
+                <p>Тази диаграма използва вертикални стълбове за представяне на данните. 
+                    Всяка стойност се представя от височината на стълба.
+                    Използва се за показване на тенденции в данните или за да се направи сравнение на множества от данни. </p>
+                <h2 class="example">Пример</h2>
+                <p>Диаграмата от примера представя оценките на Иван и Мария (сигурно съществуват) по различните езици, които изучават в училище (Това е стабилен езиков профил!!!). За целта се използват две множества от данни.  (данните са измислени)</p>
+                <p><span class="bolded">Етикети</span>: ['Български', 'Английски', 'Немски', 'Испански', 'Френски']</p>
+                <p><span class="bolded">Етикет на първото множество</span>: 'Оценки на Иван'</p>
+                <p><span class="bolded">Етикет на второто множество</span>: 'Оценки на Мария'</p>
+                <p><span class="bolded">Данните на двете множества</span> са както следва:</p>
+                <p><span class="bolded">Данни на първо множество</span>: [3, 5, 2, 4, 6]</p>
+                <p><span class="bolded">Данни на второ множество</span>: [5, 4, 3, 2, 1]</p>
+                <p>Избрани са <span class="bolded">цветове</span> за двете различни множества, техните точки, границите на техните точки и радиуса им. Указано е в <span class="bolded">опциите</span>, че тиковете трябва да започват от 0 и легендата на диаграмата трябва да е под нея.</p>
+                <p>Примерен код за създаване на диаграмата може да намерите отдолу</p>
                 <div class="chart-canva">
                     <canvas id="radarChartCanva"></canvas>
                 </div>
@@ -127,7 +140,7 @@
                             &emsp;&emsp;<span class="code-pink">labels</span> <span class="code-green">['Български', 'Английски', 'Немски', 'Испански', 'Френски']</span>,
                             &emsp;&emsp;<span class="code-pink">datasets</span> [
                             &emsp;&emsp;&emsp;&emsp;{
-                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">label</span>: <span class="code-green">'Иван'</span>,
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">label</span>: <span class="code-green">'Оценки на Иван'</span>,
                             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">[3, 5, 2, 4, 6]</span>,
                             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">backgroundColor</span>: <span class="code-green">'rgba(255, 99, 132, 0.6)'</span>, 
                             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">borderColor</span>: <span class="code-green">'rgba(255, 99, 132, 1)'</span>, 
@@ -136,7 +149,7 @@
                             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">pointRadius</span>: <span class="code-green">5</span>, 
                             &emsp;&emsp;&emsp;&emsp;}
                             &emsp;&emsp;&emsp;&emsp;{
-                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">label</span>: <span class="code-green">'Мария'</span>,
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">label</span>: <span class="code-green">'Оценки на Мария'</span>,
                             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">[5, 4, 3, 2, 1]</span>,
                             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">backgroundColor</span>: <span class="code-green">'rgba(54, 162, 235, 0.2)'</span>, 
                             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">borderColor</span>: <span class="code-green">'rgb(54, 162, 235)'</span>, 

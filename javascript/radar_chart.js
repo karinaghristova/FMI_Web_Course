@@ -5,7 +5,7 @@ var chartData = {
     labels: ['Български', 'Английски', 'Немски', 'Испански', 'Френски'],
     datasets: [
         {
-            label: 'Иван',
+            label: 'Оценки на Иван',
             data: [3, 5, 2, 4, 6], 
             backgroundColor: 'rgba(255, 99, 132, 0.6)', 
             borderColor: 'rgba(255, 99, 132, 1)', 
@@ -14,7 +14,7 @@ var chartData = {
             pointRadius: 5 
         },
         {
-            label: 'Мария',
+            label: 'Оценки на Мария',
             data: [5, 4, 3, 2, 1], 
             backgroundColor: 'rgba(54, 162, 235, 0.2)', 
             borderColor: 'rgb(54, 162, 235)', 

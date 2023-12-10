@@ -2,7 +2,7 @@ var ctx = document.getElementById('pieChartCanva').getContext('2d');
 
 // Create data
 var chartData = {
-    labels: ['Средно', 'Бакалвър', 'Магистър'],
+    labels: ['Средно', 'Бакалавър', 'Магистър'],
     datasets: [{
         data: [157, 84, 43], 
         backgroundColor: ['#94618E','#FFC0CB', '#FFFF42'], 

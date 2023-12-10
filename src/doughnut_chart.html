@@ -118,6 +118,11 @@
                     На практика донът и пай диаграмите са един и същи клас в библиотеката Chart.js. 
                     Разликата идва от това, че донът диаграмата има празно пространство в центъра. </p>
                 <h2 class="example">Пример</h2>
+                <p>Диаграмата от примера онагледява данни за броя на хората (от измислен град/село), които имат завършено средно образование, бакалавърска или магистърска степен. (данните са измислени)</p>
+                <p><span class="bolded">Етикети</span>: 'Средно', 'Бакалавър', 'Магистър'</p>
+                <p><span class="bolded">Данни на множеството</span>: [157, 84, 43]</p>
+                <p>Избрани са 3 <span class="bolded">цвята</span> и е указано в <span class="bolded">опциите</span>, че стойностите на графиката по оста Y трябва да започват от 0, както и че легендата трябва да бъде под диаграмат.</p>
+                <p>Примерен код за създаване на диаграмата може да намерите отдолу</p>
                 <div class="chart-canva">
                     <canvas id="doughnutChartCanva"></canvas>
                 </div>
@@ -126,7 +131,7 @@
                 <div class="code-container">
                     <pre>
                         <span class="code-purple">var</span> <span class="code-lavender">chartData</span> = {
-                            &emsp;&emsp;<span class="code-pink">labels</span> <span class="code-green">['Средно', 'Бакалвър', 'Магистър']</span>,
+                            &emsp;&emsp;<span class="code-pink">labels</span> <span class="code-green">['Средно', 'Бакалавър', 'Магистър']</span>,
                             &emsp;&emsp;<span class="code-pink">datasets</span> [
                             &emsp;&emsp;&emsp;&emsp;{
                             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">[157, 84, 43]</span>,

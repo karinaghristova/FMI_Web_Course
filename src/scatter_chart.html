@@ -117,6 +117,11 @@
                     Тук е важно данните да се подават като обекти, които съдържат полета X и Y.
                     Подходящи са за представяне на връзки между две променливи.</p>
                 <h2 class="example">Пример</h2>
+                <p>Диаграмата от примера показва как биха били разположени точките от едно измислено множество. (данните са измислени)</p>
+                <p><span class="bolded">Етикет</span>: 'Координати на точки'</p>
+                <p><span class="bolded">Данни на множеството</span>: [{x: 7, y: 15}, {x: 13, y: 27}, {x: 27, y: 21}, {x: 34, y: 16}, {x: 42, y: 17}]</p>
+                <p>Избрани е 1 <span class="bolded">цвят</span> и е указано в <span class="bolded">опциите</span>, че осите Х и Y са от линеен тип и се позиционират съответно отдолу и отляво.</p>
+                <p>Примерен код за създаване на диаграмата може да намерите отдолу</p>
                 <div class="chart-canva">
                     <canvas id="scatterChartCanva"></canvas>
                 </div>
@@ -158,11 +163,7 @@
                             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">type</span>: <span class="code-green">'linear'</span>
                             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">position</span>: <span class="code-green">'left'</span>
                             &emsp;&emsp;&emsp;&emsp;}
-                            &emsp;&emsp;<span class="code-pink">plugins</span>: {
-                            &emsp;&emsp;&emsp;&emsp;<span class="code-pink">legend:</span> {
-                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">display</span>: <span class="code-green">false</span>
-                            &emsp;&emsp;&emsp;&emsp;}
-                            &emsp;&emsp;}
+                            &emsp;&emsp;},
                         };
                     </pre>
                 </div>
