@@ -11,6 +11,8 @@ body {
 }
 
 #content {
+    display: flex;
+    flex-direction: column;
     margin: 5px;
     padding-left: 5px;
 }
@@ -221,6 +223,36 @@ th {
 
 tr:first-child {
     background-color: rgb(175, 88, 175);
+}
+
+#chart-types-list a {
+    float: left;
+    display: block;
+    margin: 10px;
+    text-align: center;
+    color: #49274A;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#chart-types-list a:hover{
+    color: #FE6383;
+}
+
+#chart-types-list img{
+    width: 60px;
+    height: 60px;
+}
+
+#chart-types-list .active{
+    color: #FE6383;
+    padding: 1px;
+    border-radius: 10%;
+}
+
+.chart-canva{
+    height: 300px;
+    width: 600px;
 }
 
 @media screen and (max-width: 600px) {
