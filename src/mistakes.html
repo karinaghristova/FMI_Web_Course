@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Chart.js - Best practices</title>
+  <script src="../javascript/functions.js"></script>
+</head>
+
+<body>
+  <nav id="navbar" class="nav-menu">
+    <a class="icon" onclick="navbarIcon()"><i class="fa-solid fa-bars"></i></a>
+    <a href="referat.html">Начало</a>
+    <div class="dropdown">
+      <button class="dropbtn">Обща информация
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="accessibility.html">Достъпност</a>
+        <a href="colors.html">Цветове</a>
+        <a href="data_structures.html">Данни</a>
+        <a href="fonts.html">Шрифтове</a>
+      </div>
+    </div>
+    <a href="chartTypes.html">Видове диаграми</a>
+    <a href="mistakes.html" class="active">Чести грешки</a>
+    <a href="tips.html">Полезни съвети</a>
+  </nav>
+
+  <div id="main-container">
+    <div id="content">
+
+        <div id="mistakes_content" onclick="toggleParagraphs(event)">
+          <h1>Често допускани грешки &#9746;</h1>
+
+          <h3 onclick="toggleParagraph(this)">&#10163;Недостатъчна валидация на данни</h3>
+          <p class="collapsable">Ако данните ни не са проверени, валидирани и в изчистен вид, това може да доведе до неочаквани поведения.
+            Винаги трябва да подаваме данните си в правилен формат и да се убедим, че в тях няма грешки.
+          </p>
+
+          <h3 onclick="toggleParagraph(this)">&#10163;Преизползване или неправилен подбор на определен вид диаграма</h3>
+          <p class="collapsable">Неправилният избор на диаграма за наличните данни може да доведе до грешки в интерпретацията. Chart.js предоставя разнообразие от диаграми, но всяка е предвидена за разлина употреба и сценарий. </p>
+
+          <h3 onclick="toggleParagraph(this)">&#10163;Несъобразяване с достъпността</h3>
+          <p class="collapsable">Ако не подсигурим алтернативен текст за нетекстово съдържание или не използваме ARIA атрибути, диаграмите
+            ще бъдат недостъпни за потребители с увреждания</p>
+
+          <h3 onclick="toggleParagraph(this)">&#10163;Прекалено усложняване на диаграмите</h3>
+          <p class="collapsable">Препълването на диаграмите с излишни елементи, етикети или данни може да доведе до объркване. Диаграмите по
+            правило трябва да са семпли и да се фокусират над това да предадат важната част от информацията</p>
+
+          <h3 onclick="toggleParagraph(this)">&#10163;Неизползване на легенди</h3>
+          <p class="collapsable">Липсата на легенда в диаграмата може да обърка потребителите и те да не могат да разберат значението на
+            различните елементи. Легендата внася яснота, която спомага да се избегне тази ситуация.</p>
+
+          <h3 onclick="toggleParagraph(this)">&#10163;Грешки в конфигурацията</h3>
+          <p class="collapsable">Неправилното конфигуриране на настройките може да прооди затруднения в разбирането на данните.</p>
+
+          <h3 onclick="toggleParagraph(this)">&#10163;Пренебрегване на ъпдейти на версията</h3>
+          <p class="collapsable">Това може да причини грешки, изпускане на поправки на бъгове и подобрения. Добра идея е редовно да се
+            проверява за ъпдейти и да се ревизира кода.</p>
+
+          <h3 onclick="toggleParagraph(this)">&#10163;Неправилен избор на цветове</h3>
+          <p class="collapsable">Изборът на неподходящи цветове може да повлияе негативно на визуализацията, четимостта и разбирането на
+            данните.</p>
+
+          <h3 onclick="toggleParagraph(this)">&#10163;Пренебрегване на точността на данните</h3>
+          <p class="collapsable">Неточните данни могат водят до подвеждащи визуализации и объркване. Винаги трябва да се следи за точността
+            на данните.</p>
+
+          <h3 onclick="toggleParagraph(this)">&#10163;Неправилна конфигурация на осите и мащабите</h3>
+          <p class="collapsable">Неправилното нагласяне на осите и мащабите може да доведе до разтеглене, неточни или подвеждащи диаграми.</p>
+
+          <h3 onclick="toggleParagraph(this)">&#10163;Пренебрегване на представянето</h3>
+          <p class="collapsable">Големите множества от данни могат да окажат сериозно влияние върху представянето и рендерирането. </p>
+        </div>
+    </div>
+  </div>
+</body>
+
+</html>

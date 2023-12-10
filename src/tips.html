@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Chart.js - Best practices</title>
+    <script src="../javascript/functions.js"></script>
+</head>
+
+<body>
+    <nav id="navbar" class="nav-menu">
+        <a class="icon" onclick="navbarIcon()"><i class="fa-solid fa-bars"></i></a>
+        <a href="referat.html">Начало</a>
+        <div class="dropdown">
+            <button class="dropbtn">Обща информация
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="accessibility.html">Достъпност</a>
+                <a href="colors.html">Цветове</a>
+                <a href="data_structures.html">Данни</a>
+                <a href="fonts.html">Шрифтове</a>
+            </div>
+        </div>
+        <a href="chartTypes.html">Видове диаграми</a>
+        <a href="mistakes.html">Чести грешки</a>
+        <a href="tips.html" class="active">Полезни съвети</a>
+    </nav>
+
+    <div id="main-container">
+        <div id="content">
+            <div id="tips_content" onclick="toggleParagraphs(event)">
+                <h1>Добри практики &#9745;</h1>
+
+                <h3 onclick="toggleParagraph(this)">&#10163;Разбиране на данните</h3>
+                <p class="collapsable">Важно е да се разберат правилно данните. Само така може да се избере правилният
+                    вид диаграма за тяхното представяне, така че ефективно да бъде предадена нужната информация.</p>
+
+                <h3 onclick="toggleParagraph(this)">&#10163;Избягване на излишно усложняване</h3>
+                <p class="collapsable">Не е добра идея да има прекалено много елементи и да се усложняват излишно
+                    данните и визуализацитяа им. Изборът на минимален брой видове диаграми и елементи спомага за
+                    по-лесно разбиране и избягване на визуално претоварване.</p>
+
+                <h3 onclick="toggleParagraph(this)">&#10163;Осигуряване на контекст</h3>
+                <p class="collapsable">Включването на етикети, заглавия и легенди осигурява контектст и прави таблциите
+                    по-разбираеми и четими.</p>
+
+                <h3 onclick="toggleParagraph(this)">&#10163;Правилен подбор на цветове</h3>
+                <p class="collapsable">Цветовете трябва да се възприемат лесно и да спомагат за ефективната комуникация
+                    на данни. Препоръчително е изборът на цветова гама да бъде съобразен с всички потребители,
+                    включително и тези със зрителни смущения</p>
+
+                <h3 onclick="toggleParagraph(this)">&#10163;Използване на интерактивност</h3>
+                <p class="collapsable">Инструментите за интерактивност осигуряват допълнителна информация на
+                    потребителите, когато те взаимодействат с данните. Това улеснява разбирането.</p>
+
+                <h3 onclick="toggleParagraph(this)">&#10163;Точност на данните</h3>
+                <p class="collapsable">Винаги трябва да се проверява за точност на данните. Те не трябва да бъдат
+                    подвеждащи или да съдържат грешки.</p>
+
+                <h3 onclick="toggleParagraph(this)">&#10163;Обръщане на внимание на представянето</h3>
+                <p class="collapsable">Работата с големи множества от данни може изключително много да забави
+                    рендерирането на данни, а оттам и да се влоши представянето. Добре е да се помисли за оптимизации,
+                    агрегация на данни или обработване от страна на сървъра при необходимост.</p>
+
+                <h3 onclick="toggleParagraph(this)">&#10163;Персонализация</h3>
+                <p class="collapsable">Chart.js предоставя възможност за персонализация на много нива. Добавянето на
+                    индивидуални щрихи е препоръчителна.</p>
+
+                <h3 onclick="toggleParagraph(this)">&#10163;Достъпност</h3>
+                <p class="collapsable">Важно е да се вземат в предвид всички потребители и данните да бъдат достъпни за
+                    всички. Освен това трябва да се внимава за достъпността на елементите и данните.</p>
+
+                <h3 onclick="toggleParagraph(this)">&#10163;Използване на документация</h3>
+                <p class="collapsable">Chart.js има обширна документация. Цялата нужна информация се намира там, не се
+                    страхувайте да я използвате за напътствия. Освен това, в нея са предоставени и много примери.</p>
+
+                <h3 onclick="toggleParagraph(this)">&#10163;Тестване</h3>
+                <p class="collapsable">За да се подсигури консистентно поведението на диаграмите, те трябва да бъдат
+                    тествани в контекста на различни браузъри и устройства. </p>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
