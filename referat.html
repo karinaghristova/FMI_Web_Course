@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Chart.js - Home</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="javascript/functions.js"></script>
+</head>
+
+<body>
+    <nav id="navbar" class="nav-menu">
+        <a class="icon" onclick="navbarIcon()"><i class="fa-solid fa-bars"></i></a>
+        <div class="dropdown">
+            <button class="dropbtn">Начало
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#introduction_content">Въведение</a>
+                <a href="#rendering_content">Рендериране</a>
+                <a href="#installation_content">Инсталиране</a>
+                <a href="#integration_content">Интегриране</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Обща информация
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#accessibility_content">Достъпност</a>
+                <a href="#colors_content">Цветове</a>
+                <a href="#data_structures_content">Данни</a>
+                <a href="#fonts_content">Шрифтове</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Видове диаграми
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#chart_types_content">Накратко</a>
+                <a href="#area_chart_content">Площна</a>
+                <a href="#bar_chart_content">Колонна</a>
+                <a href="#bubble_chart_content">Балонена</a>
+                <a href="#doughnut_chart_content">Донът</a>
+                <a href="#pie_chart_content">Пай</a>
+                <a href="#line_chart_content">Линейна</a>
+                <a href="#mixed_chart_content">Комбинирана</a>
+                <a href="#polar_area_chart_content">Полярна</a>
+                <a href="#radar_chart_content">Радарна</a>
+                <a href="#scatter_chart_content">Точкова</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Грешки и съвети
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#mistakes_content">Чести грешки</a>
+                <a href="#tips_content">Полезни съвети</a>
+            </div>
+        </div>
+        <a href="#resources_content">Използвани ресурси</a>
+    </nav>
+
+    <div id="main-container">
+        <div id="introduction_content">
+            <h1>Какво е Chart.js?</h1>
+            <p>Chart.js е популярна JavaScript библиотека с отворен код, която предоставя възможност за създаване на
+                интерактивни графики и диаграми в уеб приложения. Тя е лека, проста за използване и предоставя
+                високо стилизирани графики, които могат бързо да бъдат вградени в уеб страници. Освен това разполага
+                с добре описана документация, която прави работата с нея изключително приятна. Chart.js е съвместима
+                с всички известни JavaСcript библиотеки, като в това число се вклюват React, Vue и Angular.</p>
+        </div>
+
+        <div id="rendering_content">
+            <h1>Как се рендерира?</h1>
+            <p>За разлика от много други библиотеки, които използват SVG, Chart.js рендерира диаграмите на HTML5
+                платно, още известно като <span class="bolded">canvas</span>. Това значително подобрява представянето,
+                особено при използване на
+                големи множества данни и комплексни визуализации. От друга страна, този начин на рендериране не
+                позволява CSS стилизиране, което налага използването на вградени опции или създаването на
+                персонализирани добавки (plugins), при желание за индивидуална стилизация.</p>
+        </div>
+
+        <div id="installation_content">
+            <h1>Как да си инсталираме Chart.js?</h1>
+            <ul>
+                <li>
+                    <h3>Мениджър за Пакети Node - npm</h3>
+                    <p>Първият начин, по който можем да инсталираме библиотеката Chart.js, е чрез мениджъра за
+                        пакети Node, като използваме командата <span class="bolded">npm install chart.js</span></p>
+                </li>
+                <li>
+                    <h3>Мрежа за доставка на съдържание - CDN</h3>
+                    <p>Можем също така да използваме мрежа за доставка на съдържание, още известна като CDN.
+                        Необходимият линк може да бъде намерен <a href="https://cdnjs.com/libraries/Chart.js"
+                            class="bolded">тук</a></p>
+                </li>
+                <li>
+                    <h3>jsDelivr</h3>
+                    <p>С този подход използваме скриптов елемент в HTML кода. За актуален линк, който се слага в
+                        него, може да посетите <a href="https://www.jsdelivr.com/package/npm/chart.js?path=dist"
+                            class="bolded">тази страница</a></p>
+                </li>
+                <li>
+                    <h3>Гитхъб</h3>
+                    <p>Не на последно място, може да изтеглим <a
+                            href="https://github.com/chartjs/Chart.js/releases/tag/v4.4.1" class="bolded">последна
+                            версия</a> на библиотеката Chart.js от Гитхъб. </p>
+                </li>
+            </ul>
+        </div>
+
+        <div id="integration_content">
+            <h1>Как се интегрира?</h1>
+            <p>Интегрирането на Chart.js в нашия код може да стане с помощта на чист JavaScript или чрез зареждане на
+                модулни компоненти.</p>
+            <div id="integration_examples">
+                <h3 class="example">Пример за интеграция чрез скрипт (чист JavaScript)</h3>
+                <div class="code-container" name="code_integration_example_js">
+                    <pre>
+                            &lt<span class="code-purple">script </span><span class="code-pink">src</span>=<span class="code-lavender">"path/to/chartjs/dist/chart.umd.js"</span>&gt&lt/<span class="code-purple">script</span>&gt
+                            &lt/<span class="code-purple">script</span>&gt
+                                <span class="html-p-text"> Your code</span>
+                            &lt/<span class="code-purple">script</span>&gt
+                        </pre>
+
+                </div>
+
+                <h3 class="example">Пример за интеграция чрез включване на пакет</h3>
+                <div class="code-container" name="code_integration_example_package">
+                    <span class="code-purple">import </span><span class="code-pink">Chart</span><span
+                        class="code-purple"> from</span><span class="code-lavender"> 'chart.js/auto'</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="accessibility_content">
+            <h1>Достъпност</h1>
+            <p>Диаграмите на Chart.js се рендерират чрез платна <span class="bolded">(canvas)</span>. Наша задача е
+                да създадем този елемент по такъв начин, че той да бъде достъпен. Добрата новина е, че той се
+                поддържа от всички браузъри, лошата - съдържанието му не е достъпно за четци на екрани. При
+                елементът платно достъпността трябва да бъде добавена чрез ARIA атрибути или чрез използване на
+                резервно съдържание, което трябва да се намира между отварящите и затварящите тагове на елемента
+                платно.</p>
+
+            <div id="accessibility_examples">
+                <div id="accessibility_good_examples">
+                    <h3 class="example">Пример за добра достъпност чрез ARIA атрибути</h3>
+                    <p>В този пример имаме зададени атрибутите етикет и роля, които осигуряват достъпно име на
+                        елементa платно</p>
+                    <div class="code-container" name="code_accessibility_good_example_aria">
+                        &lt;<span class="code-purple">canvas</span> <span class="code-pink">id</span>=<span
+                            class="code-lavender">"good_example_canva"</span> <span class="code-pink">width</span>=<span
+                            class="code-lavender">"300"</span> <span class="code-pink">height</span>=<span
+                            class="code-lavender">"150"</span> <span class="code-pink">aria-label</span>=<span
+                            class="code-lavender">"Labeled"</span>
+                        <span class="code-pink">role</span>=<span class="code-lavender">"img"</span>&gt;&lt;/<span
+                            class="code-purple">canvas</span>&gt;
+                    </div>
+
+                    <h3 class="example">Пример за добра достъпност чрез резервно съдържание</h3>
+                    <p>Резервното съдържание подсигурява текстова алтернатива на елементa платно</p>
+                    <div class="code-container" name="code_accessibility_good_example_fallback_content>
+                        &lt<span class=" code-purple">canvas</span> <span class="code-pink">id</span>=<span
+                            class="code-lavender">"good_example_canva_fbc"</span> <span
+                            class="code-pink">width</span>=<span class="code-lavender">"300"</span> <span
+                            class="code-pink">height</span>=<span class="code-lavender">"150"</span>&gt&lt<span
+                            class="code-purple">p</span>&gt<span class="bolded-text">Fallback
+                            Content</span>&lt/<span class="code-purple">p</span>&gt&lt/<span
+                            class="code-purple">canvas</span>&gt
+                    </div>
+                </div>
+
+                <div id="accessibility_bad_examples">
+                    <h3 class="anti-example">Пример за лоша достъпност - без ARIA атрибути</h3>
+                    <p>В този пример липсва достъпно име или роля за елементa платно</p>
+                    <div class="code-container" name="code_accessibility_bad_example_aria">
+                        &lt;<span class="code-purple">canvas</span> <span class="code-pink">id</span>=<span
+                            class="code-lavender">"bad_example_canva"</span> <span class="code-pink">width</span>=<span
+                            class="code-lavender">"300"</span> <span class="code-pink">height</span>=<span
+                            class="code-lavender">"150"</span>&gt;&lt;/<span class="code-purple">canvas</span>&gt;
+                    </div>
+
+                    <h3 class="anti-example">Пример за лоша достъпност - без резервно съдържание</h3>
+                    <p>Резервното съдържание на елементa платно е недостъпно</p>
+                    <div class="code-container" name="code_accessibility_bad_example_fallback_content">
+                        &lt<span class="code-purple">canvas</span> <span class="code-pink">id</span>=<span
+                            class="code-lavender">"bad_example_canva_fbc"</span> <span
+                            class="code-pink">width</span>=<span class="code-lavender">"300"</span> <span
+                            class="code-pink">height</span>=<span class="code-lavender">"150"</span>&gt<span
+                            class="bolded-text">Bad Fallback Content</span>&lt/<span
+                            class="code-purple">canvas</span>&gt
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="colors_content">
+            <h1>Цветове</h1>
+            <p>Библиотеката Chart.js разполага с предварително зададени цветове. Въпреки това е предоставена
+                възможност те да бъдат настроени ръчно. За тази цел могат да бъдат използвани шестнадесетичните
+                стойности на цветовете, тяхната стойност по RBG схемата или според HSL схемата. Поддържат се 3
+                основни вида промени в това отношение:</p>
+            <ul>
+                <li>
+                    <p>Промяна на цвета на фона, както и цвета на границите на геометричните обекти.</p>
+                </li>
+                <li>
+                    <p>Промяна на цвета на текста на текстовите елементи.</p>
+                </li>
+                <li>
+                    <p>Промяна на цвета на фона на цялото платно.</p>
+                </li>
+            </ul>
+
+            <div id="color_changes_examples">
+                <h3 class="example">Примери за промяна на цветове</h3>
+                <div class="code-container" name="code_color_change_example">
+                    <pre>
+                        <span class="code-pink">Chart.defaults.borderColor</span>=<span                        class="code-lavender">'red'</span>
+                        <span class="code-pink">Chart.defaults.color</span>=<span class="code-lavender">rgb(255, 0, 255)</span>
+                        <span class="code-pink">Chart.defaults.color</span>=<span
+                            class="code-lavender">#94618E</span>
+                    </pre>
+                </div>
+
+            </div>
+
+            <div id="default-colors">
+                <h2>Цветове по подразбиране</h2>
+                <p>Използването на цветовете по подразбиране не е особено добра практика. При наличие на няколко
+                    множества от данни те ще бъдат на практика неразличими. За да се избегне това, може да се зададат
+                    различни стойности на цветовете на фона и границите на всеки един от тях. Това обаче може да
+                    означава допълнително време и работа. За улеснение могат да бъдат използвани допълнения
+                    (plugins), които разполагат с предефинирани или генерирани цветови гами. Библиотеката Chart.js
+                    има вградено допълнение <span class="bolded">Colors</span>, което предоставя 7 цвята. За да може
+                    да се използва, е необходимо да се включи и регистрира в кода.</p>
+
+                <div id="chartjs-default-colors-list">
+                    <p class="square-blue"></p>
+                    <p class="square-pink"></p>
+                    <p class="square-green"></p>
+                    <p class="square-orange"></p>
+                    <p class="square-purple"></p>
+                    <p class="square-yellow"></p>
+                    <p class="square-grey"></p>
+                </div>
+
+                <div class="code-container" name="code_example_default_colors">
+                    <pre>
+                        <span class="code-purple">import</span> {<span class="code-lavender">Colors</span>} <span
+                            class="code-purple">from</span> <span class="code-pink">'chart.js'</span>;
+                        <span class="code-lavender">Chart.</span><span class="code-pink">register</span><span
+                            class="lavender">(Colors);</span>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="data_structures_content">
+            <h1>Данни</h1>
+            <p>Подаването на свойството/полето данни може да бъде осъществено под различни формати. По подразбиране
+                свойството/полето данни на множеството данни се преобразува в съответствие с избраната диаграма.
+                Важно е да се отбележи, че ако бъде използвано свойството/полето етикети, то трябва да съдържа
+                същия брой елементи като този на множеството от данни с най-много елементи. Полето/свойството
+                етикети се използва, за да бъдат поставени означения в оста на индексите, т.е. оста Х. За да бъдат
+                рендерирани правилно етикетите, те трябва дая бъдат от тип стринг или число. </p>
+
+            <div id="primitive_array_type">
+                <h2>Масив от примитивни типове</h2>
+                <div class="code-container" name="code_primitive_array_type">
+                    <pre>
+                        &emsp;<span class="code-purple">const</span> cfg = {
+                        &emsp;&emsp;&emsp;<span class="code-pink">type</span>: <span class="code-lavender">'bar'</span>,
+                        &emsp;&emsp;&emsp;<span class="code-pink">data</span>: {
+                            &emsp;&emsp;&emsp;&emsp;<span class="code-pink">datasets</span>: [{
+                            &emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">data</span>: [<span class="code-lavender">2, 3, 4, 5, 6</span>]
+                            &emsp;&emsp;&emsp;&emsp;}],
+                            &emsp;&emsp;&emsp;&emsp;<span class="code-pink">labels</span>: [<span class="code-lavender">'слаб', 'среден', 'добър', 'много добър', 'отличен'</span>]
+                            &emsp;&emsp;&emsp;}
+                            &emsp;}
+                    </pre>
+                </div>
+            </div>
+
+
+            <div id="object_array_type">
+                <h2>Масив от обекти</h2>
+                <p>Това всъщност е форматът, който се използва вътрешно за преработените данни. В този режим
+                    преобразуването може да бъде изкллючено от опциите (<span class="bolded">parsing: false</span>). Ако
+                    това бъде направено, данните трябва да бъдат сортирани и представени в съответния формат, който
+                    определената диаграма и мащаби използват вътрешно. Нулевата стойност (<span
+                        class="bolded">null</span>) може да бъде използвана за пропускане на стойности.</p>
+                <div class="code-container" name="code_object_array_type">
+                    <pre>
+                        &emsp;<span class="code-purple">const</span> cfg = {
+                        &emsp;&emsp;&emsp;<span class="code-pink">type</span>: <span class="code-lavender">'bar'</span>,
+                        &emsp;&emsp;&emsp;<span class="code-pink">data</span>: {
+                            &emsp;&emsp;&emsp;&emsp;<span class="code-pink">datasets</span>: [{
+                            &emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">data</span>: [{<span class="code-lavender">x</span>: <span class="code-green">'Ivancho'</span>, <span class="code-lavender">y</span>: 5}, {<span class="code-lavender">x</span>: <span class="code-green">'Maria'</span>, <span class="code-lavender">y</span>: 6}}]
+                            &emsp;&emsp;&emsp;&emsp;}],
+                            &emsp;&emsp;&emsp;}
+                            &emsp;}
+                    </pre>
+                </div>
+            </div>
+
+            <div id="object_array_custom_properties_type">
+                <h2>Масив от обекти с персонализирани свойства/полета</h2>
+                <p>Ако използваме пай или донът диаграма е важно обектът да има ключ, който да посочва стойността. Освен
+                    това, ако ключът съдържа точка, тя трябва да се избегне с двойна наклонена черта.</p>
+
+                <div class="code-container" name="code_object_array_custom_properties_type">
+                    <pre>
+                        &emsp;<span class="code-purple">const</span> cfg = {
+                        &emsp;&emsp;&emsp;<span class="code-pink">type</span>: <span class="code-lavender">'bar'</span>,
+                        &emsp;&emsp;&emsp;<span class="code-pink">data</span>: {
+                            &emsp;&emsp;&emsp;&emsp;<span class="code-pink">datasets</span>: [{
+                            &emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">data</span>: [{<span class="code-lavender">brand</span>: <span class="code-green">'Mercedes'</span>, <span class="code-lavender">price</span>: {<span class="code-lavender">value</span>: 35}}, {<span class="code-lavender">brand</span>: <span class="code-green">'BMW'</span>, <span class="code-lavender">price</span>: {<span class="code-lavender">value</span>: 33}}]
+                            &emsp;&emsp;&emsp;&emsp;}],
+                            &emsp;&emsp;&emsp;}
+                        &emsp;&emsp;&emsp;<span class="code-pink">options</span>: {
+                            &emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">parsing</span>: {
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">key</span>: <span class="code-green">'price.value'</span>
+                            &emsp;&emsp;&emsp;&emsp;}
+                            &emsp;&emsp;&emsp;}
+                            &emsp;&emsp;}
+                    </pre>
+                </div>
+            </div>
+
+            <div id="object_type">
+                <h2>Обект</h2>
+                <p>В този случай името на обекта служи за индекс, а стойността става стойност.</p>
+
+                <div class="code-container" name="code_object_type">
+                    <pre>
+                        &emsp;<span class="code-purple">const</span> cfg = {
+                        &emsp;&emsp;&emsp;<span class="code-pink">type</span>: <span class="code-lavender">'bar'</span>,
+                        &emsp;&emsp;&emsp;<span class="code-pink">data</span>: {
+                            &emsp;&emsp;&emsp;&emsp;<span class="code-pink">datasets</span>: [{
+                            &emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">data</span>: {
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-green">Издържали изпита</span>: <span class="code-lavender">60</span>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-green">Скъсани</span>: <span class="code-lavender">13</span>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;}
+                            &emsp;&emsp;&emsp;&emsp;}],
+                            &emsp;&emsp;&emsp;}
+                            &emsp;}
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="fonts_content">
+            <h1>Шрифтове</h1>
+            <p>Chart.js предлага възможност за промяна на шрифта, неговия размер, стил, тегло и т.н. По
+                подразбиране, ако не бъдат заявени специфични опции се използват глобалните настройки. Специалните
+                глобални настройки могат да бъдат достъпени чрез <span class="bolded">Chart.defaults.font</span>.
+            </p>
+            <p><span class="bolded">Важно уточнение</span>: Ако бъде използван шрифт, който не съществува в
+                системата, браузърът няма да го го приложи. Ако възникнат подобни проблеми, или има наличие на
+                странности е добре да се провери дали подаденият шрифт съществува в системата.</p>
+
+            <div id="fonts_options">
+                <table name="table_fonts">
+                    <tr>
+                        <th>Име</th>
+                        <th>Тип</th>
+                        <th>Стойност по подразбиране</th>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Семейство (<span class="bolded">family</span>)
+                        </td>
+                        <td>стринг</td>
+                        <td>"Helvetica neue", "Helvetica", "Arial", sans-serif</td>
+                    </tr>
+
+                    <tr>
+                        <td>Размер (<span class="bolded">size</span>)</td>
+                        <td>число</td>
+                        <td>12</td>
+                    </tr>
+
+                    <tr>
+                        <td>Стил (<span class="bolded">style</span>)</td>
+                        <td>стринг</td>
+                        <td>'normal'</td>
+
+                    </tr>
+
+                    <tr>
+                        <td>Тегло (<span class="bolded">weight</span>)</td>
+                        <td>normal | bold | lighter | bolder | number</td>
+                        <td>undefined</td>
+                    </tr>
+
+                    <tr>
+                        <td>Височина на реда (<span class="bolded">lineHeight</span>)</td>
+                        <td>число | стринг</td>
+                        <td>1.2</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="chart_types_content">
+            <h1>Видове диаграми</h1>
+            <p>
+                Библиотеката Chart.js предоставя разнообразие от диаграми за визуализация на данни, включително колонни
+                и линейни диаграми за следене на тенденции, донът и пай диаграми за представяне на части от цялостната
+                стойност, полярни и радарни диаграми за обобщен поглед върху разпределението, както и точкови диаграми
+                за изследване на връзки между две променливи.
+            </p>
+
+            <p>
+                Това разнообразие в комбинация с опциите за персонализация и лесния начин на използване, предоставя
+                гъвкавост и възможност за адаптация според нуждите на потребителя. Именно поради тези прични Chart.js е
+                мощен инструмент за създаване на разнообразни визуализации на данни.
+            </p>
+
+
+        </div>
+
+        <div id="area_chart_content">
+            <h1>Площна диаграма</h1>
+            <h2 class="example">Пример</h2>
+            <p>Диаграмата от примера представя информация за броя на получените оценки по уеб технологии и изкуствен
+                интелект. За целта се използват две множества от данни. Така лесно можем да придобием идея за
+                представянето на студентите по двата предмета. (данните са измислени)</p>
+            <p><span class="bolded">Етикети</span>: ['Слаб', 'Среден', 'Добър', 'Много добър', 'Отличен']</p>
+            <p><span class="bolded">Етикет на първото множество</span>: 'Оценки по Уеб'</p>
+            <p><span class="bolded">Етикет на второто множество</span>: 'Оценки по ИИ'</p>
+            <p><span class="bolded">Данните на двете множества</span> са както следва:</p>
+            <p><span class="bolded">Данни на първо множество</span>: [3, 17, 21, 65, 15]</p>
+            <p><span class="bolded">Данни на второ множество</span>: [10, 7, 30, 15, 45]</p>
+            <p>Избрани са 2 <span class="bolded">цвята</span> за двете различни множества и е указано в <span
+                    class="bolded">опциите</span>, че стойностите на графиката по оста Y трябва да започват от 0.</p>
+            <p>Примерен код за създаване на диаграмата може да намерите отдолу</p>
+            <div class="chart-canva">
+                <canvas id="areaChartCanva"></canvas>
+            </div>
+
+            <button class="codeToggleButton" onclick="toggleCode('area_chart_code', this)">Покажи кода</button>
+
+            <div id="area_chart_code" class="hidden">
+                <h3>Създаване на данни:</h3>
+                <div class="code-container" name="code_area_chart_data_creation">
+                    <pre>
+                        <span class="code-purple">var</span> <span class="code-lavender">chartData</span> = {
+                            &emsp;&emsp;<span class="code-pink">labels</span> <span class="code-green">['Слаб', 'Среден', 'Добър', 'Много добър', 'Отличен']</span>,
+                            &emsp;&emsp;<span class="code-pink">datasets</span> [
+                            &emsp;&emsp;&emsp;&emsp;{
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">label</span>: <span class="code-green">'Оценки по Уеб'</span>,
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">[3, 17, 21, 65, 15]</span>,
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">backgroundColor</span>: <span class="code-green">'#94618E'</span>, 
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">borderColor</span>: <span class="code-green">'purple'</span>, 
+                            &emsp;&emsp;
+                            &emsp;&emsp;&emsp;&emsp;}
+                            &emsp;&emsp;&emsp;&emsp;{
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">label</span>: <span class="code-green">'Оценки по ИИ'</span>,
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">[10, 7, 30, 15, 45]</span>,
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">backgroundColor</span>: <span class="code-green">'#FFC0CB'</span>, 
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">borderColor</span>: <span class="code-green">'#F59FAE'</span>, 
+                            &emsp;&emsp;
+                            &emsp;&emsp;&emsp;&emsp;}
+                            &emsp;&emsp;]
+                        };
+                    </pre>
+                </div>
+
+                <h3>Създаване на опции</h3>
+                <div class="code-container" name="code_area_chart_option_creation">
+                    <pre>
+                        <span class="code-purple">var</span> <span class="code-lavender">chartOptions</span> = {
+                            &emsp;&emsp;<span class="code-pink">scales</span>: {
+                            &emsp;&emsp;&emsp;&emsp;<span class="code-pink">y</span> {
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">beginAtZero</span>: <span class="code-green">true</span>
+                            &emsp;&emsp;&emsp;&emsp;}
+                            &emsp;&emsp;}
+                        };
+                    </pre>
+                </div>
+
+                <h3>Създаване на диаграмата</h3>
+                <div class="code-container" name="code_area_chart_creation">
+                    <pre>
+                        <span class="code-purple">var</span> <span class="code-lavender">areaChart</span> = <span class="code-purple">new</span> <span class="code-lavender">Chart</span>(ctx, {
+                        &emsp;&emsp;<span class="code-pink">type</span>: <span class="code-green">'line'</span>,
+                        &emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">chartData</span>,
+                        &emsp;&emsp;<span class="code-pink">options</span>: <span class="code-green">chartOptions</span>
+                        });
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="bar_chart_content">
+            <h1>Колонна диаграма</h1>
+            <p>Тази диаграма използва вертикални стълбове за представяне на данните.
+                Всяка стойност се представя от височината на стълба.
+                Използва се за показване на тенденции в данните или за да се направи сравнение на множества от данни.
+            </p>
+            <h2 class="example">Пример</h2>
+            <p>Диаграмата от примера представя информация за похарчените от въображаем приятел пари за 2022 и 2023
+                година. За целта се използват две множества от данни. (данните са измислени)</p>
+            <p><span class="bolded">Етикети</span>: ['Януари', 'Февруари', 'Март', 'Април', 'Май', 'Юни', 'Юли',
+                'Август', 'Септември', 'Октомври', 'Ноември', 'Декември']</p>
+            <p><span class="bolded">Етикет на първото множество</span>: 'Похарчени пари през 2022'</p>
+            <p><span class="bolded">Етикет на второто множество</span>: 'Похарчени пари през 202'</p>
+            <p><span class="bolded">Данните на двете множества</span> са както следва:</p>
+            <p><span class="bolded">Данни на първо множество</span>: [578, 690, 896, 1296, 753, 432, 875, 321, 456, 497,
+                521, 685]</p>
+            <p><span class="bolded">Данни на второ множество</span>: [758, 960, 986, 673, 1321, 1294, 652, 895, 923,
+                657, 1106, 1213]</p>
+            <p>Избрани са 2 <span class="bolded">цвята</span> за двете различни множества и е указано в <span
+                    class="bolded">опциите</span>, че стойностите на графиката по оста Y трябва да започват от 0.</p>
+            <p>Примерен код за създаване на диаграмата може да намерите отдолу</p>
+            <div class="chart-canva">
+                <canvas id="barChartCanva"></canvas>
+            </div>
+
+            <button class="codeToggleButton" onclick="toggleCode('bar_chart_code', this)">Покажи кода</button>
+            <div id="bar_chart_code" class="hidden">
+                <h3>Създаване на данни:</h3>
+                <div class="code-container" name="code_bar_chart_data_creation">
+                    <pre>
+                        <span class="code-purple">var</span> <span class="code-lavender">chartData</span> = {
+                            &emsp;&emsp;<span class="code-pink">labels</span> <span class="code-green">['Януари', 'Февруари', 'Март', 'Април', 'Май', 'Юни', 'Юли', 'Август', 'Септември', 'Октомври', 'Ноември', 'Декември']</span>,
+                            &emsp;&emsp;<span class="code-pink">datasets</span> [
+                            &emsp;&emsp;&emsp;&emsp;{
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">label</span>: <span class="code-green">'Похарчени пари през 2022'</span>,
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">[578, 690, 896, 1296, 753, 432, 875, 321, 456, 497, 521, 685]</span>,
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">backgroundColor</span>: <span class="code-green">'#94618E'</span>, 
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">borderColor</span>: <span class="code-green">'purple'</span>, 
+                            &emsp;&emsp;
+                            &emsp;&emsp;&emsp;&emsp;}
+                            &emsp;&emsp;&emsp;&emsp;{
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">label</span>: <span class="code-green">'Похарчени пари през 2023'</span>,
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">[758, 960, 986, 673, 1321, 1294, 652, 895, 923, 657, 1106, 1213]</span>,
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">backgroundColor</span>: <span class="code-green">'#FFC0CB'</span>, 
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">borderColor</span>: <span class="code-green">'#F59FAE'</span>, 
+                            &emsp;&emsp;
+                            &emsp;&emsp;&emsp;&emsp;}
+                            &emsp;&emsp;]
+                        };
+                    </pre>
+                </div>
+
+                <h3>Създаване на опции</h3>
+                <div class="code-container" name="code_bar_chart_option_creation">
+                    <pre>
+                        <span class="code-purple">var</span> <span class="code-lavender">chartOptions</span> = {
+                            &emsp;&emsp;<span class="code-pink">scales</span>: {
+                            &emsp;&emsp;&emsp;&emsp;<span class="code-pink">y</span> {
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">beginAtZero</span>: <span class="code-green">true</span>
+                            &emsp;&emsp;&emsp;&emsp;}
+                            &emsp;&emsp;}
+                        };
+                    </pre>
+                </div>
+
+                <h3>Създаване на диаграмата</h3>
+                <div class="code-container" name="code_bar_chart_creation">
+                    <pre>
+                        <span class="code-purple">var</span> <span class="code-lavender">barChart</span> = <span class="code-purple">new</span> <span class="code-lavender">Chart</span>(ctx, {
+                        &emsp;&emsp;<span class="code-pink">type</span>: <span class="code-green">'bar'</span>,
+                        &emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">chartData</span>,
+                        &emsp;&emsp;<span class="code-pink">options</span>: <span class="code-green">chartOptions</span>
+                        });
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="bubble_chart_content">
+            <h1>Балонена диаграма</h1>
+            <p> Балонената диаграма се използва, за да се покажат 3 измерения на данните. Първите 2 измерения определят
+                локацията на балончето, а третото определя неговия размер.</p>
+            <h2 class="example">Пример</h2>
+            <p>Диаграмата от примера онагледява данни за координати на точки с различен радиус. (данните са измислени)
+            </p>
+            <p><span class="bolded">Етикет</span>: 'Координати на точки'</p>
+            <p><span class="bolded">Данни на множеството</span>: [{x: 10, y: 20, r: 7 }, {x: 30, y: 7, r: 25 }, {x: 50,
+                y: 47, r: 13 }, {x: 15, y: 31, r: 15 }, {x: 20, y: 40, r: 25 }, {x: 43, y: 23, r: 20 }, {x: 21, y: 20,
+                r: 15 }, {x: 34, y: 40, r: 25 }, {x: 47, y: 13, r: 20 }]</p>
+            <p>Избран e 1 <span class="bolded">цвят</span> и е указано в <span class="bolded">опциите</span>, че
+                стойностите на графиката по оста Y трябва да започват от 0.</p>
+            <p>Примерен код за създаване на диаграмата може да намерите отдолу</p>
+            <div class="chart-canva">
+                <canvas id="bubbleChartCanva"></canvas>
+            </div>
+
+            <button class="codeToggleButton" onclick="toggleCode('bubble_chart_code', this)">Покажи кода</button>
+            <div id="bubble_chart_code" class="hidden">
+                <h3>Създаване на данни:</h3>
+                <div class="code-container" name="code_bubble_chart_data_creation">
+                    <pre>
+                        <span class="code-purple">var</span> <span class="code-lavender">chartData</span> = {
+                            &emsp;&emsp;<span class="code-pink">datasets</span> [
+                            &emsp;&emsp;&emsp;&emsp;{
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">label</span>: <span class="code-green">'Координати на точки'</span>,
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">data</span>: [
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{<span class="code-lavender">x</span>: <span class="code-green">10</span>, <span class="code-lavender">y</span>: <span class="code-green">20</span>, <span class="code-lavender">r</span>: <span class="code-green">7</span> }</span>,
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{<span class="code-lavender">x</span>: <span class="code-green">30</span>, <span class="code-lavender">y</span>: <span class="code-green">7</span>, <span class="code-lavender">r</span>: <span class="code-green">25</span> }</span>,
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{<span class="code-lavender">x</span>: <span class="code-green">50</span>, <span class="code-lavender">y</span>: <span class="code-green">47</span>, <span class="code-lavender">r</span>: <span class="code-green">13</span> }</span>,
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{<span class="code-lavender">x</span>: <span class="code-green">15</span>, <span class="code-lavender">y</span>: <span class="code-green">31</span>, <span class="code-lavender">r</span>: <span class="code-green">15</span> }</span>,
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{<span class="code-lavender">x</span>: <span class="code-green">20</span>, <span class="code-lavender">y</span>: <span class="code-green">40</span>, <span class="code-lavender">r</span>: <span class="code-green">25</span> }</span>,
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{<span class="code-lavender">x</span>: <span class="code-green">43</span>, <span class="code-lavender">y</span>: <span class="code-green">23</span>, <span class="code-lavender">r</span>: <span class="code-green">20</span> }</span>,
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{<span class="code-lavender">x</span>: <span class="code-green">21</span>, <span class="code-lavender">y</span>: <span class="code-green">20</span>, <span class="code-lavender">r</span>: <span class="code-green">15</span> }</span>,
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{<span class="code-lavender">x</span>: <span class="code-green">34</span>, <span class="code-lavender">y</span>: <span class="code-green">40</span>, <span class="code-lavender">r</span>: <span class="code-green">25</span> }</span>,
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{<span class="code-lavender">x</span>: <span class="code-green">47</span>, <span class="code-lavender">y</span>: <span class="code-green">13</span>, <span class="code-lavender">r</span>: <span class="code-green">20</span> }</span>,
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;],
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">backgroundColor</span>: <span class="code-green">'#94618E'</span>, 
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">borderColor</span>: <span class="code-green">'purple'</span>, 
+                            &emsp;&emsp;&emsp;&emsp;}
+                            &emsp;&emsp;]
+                        };
+                    </pre>
+                </div>
+
+                <h3>Създаване на опции</h3>
+                <div class="code-container" name="code_bubble_chart_option_creation">
+                    <pre>
+                        <span class="code-purple">var</span> <span class="code-lavender">chartOptions</span> = {
+                            &emsp;&emsp;<span class="code-pink">scales</span>: {
+                            &emsp;&emsp;&emsp;&emsp;<span class="code-pink">y</span> {
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">beginAtZero</span>: <span class="code-green">true</span>
+                            &emsp;&emsp;&emsp;&emsp;}
+                            &emsp;&emsp;}
+                        };
+                    </pre>
+                </div>
+
+                <h3>Създаване на диаграмата</h3>
+                <div class="code-container" name="code_bubble_chart_creation">
+                    <pre>
+                        <span class="code-purple">var</span> <span class="code-lavender">bubbleChart</span> = <span class="code-purple">new</span> <span class="code-lavender">Chart</span>(ctx, {
+                        &emsp;&emsp;<span class="code-pink">type</span>: <span class="code-green">'bubble'</span>,
+                        &emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">chartData</span>,
+                        &emsp;&emsp;<span class="code-pink">options</span>: <span class="code-green">chartOptions</span>
+                        });
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="doughnut_chart_content">
+            <h1>Донът диаграма</h1>
+            <p>Донът и пай диаграмата са разделени на сегменти, като всеки от тях показва пропорционалната стойност на
+                всяко парче от данни.
+                Често се употребяват за онагледяваме на отношението в пропорциите между дани.
+                На практика донът и пай диаграмите са един и същи клас в библиотеката Chart.js.
+                Разликата идва от това, че донът диаграмата има празно пространство в центъра. </p>
+            <h2 class="example">Пример</h2>
+            <p>Диаграмата от примера онагледява данни за броя на хората (от измислен град/село), които имат завършено
+                средно образование, бакалавърска или магистърска степен. (данните са измислени)</p>
+            <p><span class="bolded">Етикети</span>: 'Средно', 'Бакалавър', 'Магистър'</p>
+            <p><span class="bolded">Данни на множеството</span>: [157, 84, 43]</p>
+            <p>Избрани са 3 <span class="bolded">цвята</span> и е указано в <span class="bolded">опциите</span>, че
+                стойностите на графиката по оста Y трябва да започват от 0, както и че легендата трябва да бъде под
+                диаграмат.</p>
+            <p>Примерен код за създаване на диаграмата може да намерите отдолу</p>
+            <div class="chart-canva">
+                <canvas id="doughnutChartCanva"></canvas>
+            </div>
+
+            <button class="codeToggleButton" onclick="toggleCode('doughnut_chart_code', this)">Покажи кода</button>
+            <div id="doughnut_chart_code" class="hidden">
+                <h3>Създаване на данни:</h3>
+                <div class="code-container" name="code_doughnut_chart_data_creation">
+                    <pre>
+                    <span class="code-purple">var</span> <span class="code-lavender">chartData</span> = {
+                        &emsp;&emsp;<span class="code-pink">labels</span> <span class="code-green">['Средно', 'Бакалавър', 'Магистър']</span>,
+                        &emsp;&emsp;<span class="code-pink">datasets</span> [
+                        &emsp;&emsp;&emsp;&emsp;{
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">[157, 84, 43]</span>,
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">backgroundColor</span>: <span class="code-green">['#94618E','#FFC0CB', '#FFFF42']</span>, 
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">borderColor</span>: <span class="code-green">['#85517F','#F59FAE', '#EBEB3D']</span>, 
+                        &emsp;&emsp;
+                        &emsp;&emsp;&emsp;&emsp;}]
+                        &emsp;&emsp;};
+                </pre>
+                </div>
+
+                <h3>Създаване на опции</h3>
+                <div class="code-container" name="code_doughnut_chart_option_creation">
+                    <pre>
+                    <span class="code-purple">var</span> <span class="code-lavender">chartOptions</span> = {
+                        &emsp;&emsp;<span class="code-pink">responsive</span>: <span class="code-green">true</span>;
+                        &emsp;&emsp;<span class="code-pink">cutout</span>: <span class="code-green">'80'</span>;
+                        &emsp;&emsp;<span class="code-pink">plugins</span>: {
+                        &emsp;&emsp;&emsp;&emsp;<span class="code-pink">legend:</span> {
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">position</span>: <span class="code-green">'bottom'</span>
+                        &emsp;&emsp;&emsp;&emsp;}
+                        &emsp;&emsp;}
+                    };
+                </pre>
+                </div>
+
+                <h3>Създаване на диаграмата</h3>
+                <div class="code-container" name="code_doughnut_chart_creation">
+                    <pre>
+                    <span class="code-purple">var</span> <span class="code-lavender">doughnutChart</span> = <span class="code-purple">new</span> <span class="code-lavender">Chart</span>(ctx, {
+                    &emsp;&emsp;<span class="code-pink">type</span>: <span class="code-green">'doughnut'</span>,
+                    &emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">chartData</span>,
+                    &emsp;&emsp;<span class="code-pink">options</span>: <span class="code-green">chartOptions</span>
+                    });
+                </pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="pie_chart_content">
+            <h1>Пай диаграма</h1>
+            <p> Тези диаграми демонстрират разделението на общата стойност на сектори в кръг, като всяка стойност е
+                представена от ъгъла на съответния сектор.
+                Удобни са за онагледяваме на отношението между дани.</p>
+            <h2 class="example">Пример</h2>
+            <p>Диаграмата от примера онагледява данни за броя на хората, които имат завършено средно образование,
+                бакалавърска или магистърска степен. (данните са измислени) (И да, примерът е същият като този за донът
+                диаграмата, но е умишлено)</p>
+            <p><span class="bolded">Етикети</span>: 'Средно', 'Бакалавър', 'Магистър'</p>
+            <p><span class="bolded">Данни на множеството</span>: [157, 84, 43]</p>
+            <p>Избрани са 3 <span class="bolded">цвята</span> и е указано в <span class="bolded">опциите</span>, че
+                стойностите на графиката по оста Y трябва да започват от 0, както и че легендата трябва да бъде под
+                диаграмат.</p>
+            <p>Примерен код за създаване на диаграмата може да намерите отдолу</p>
+            <div class="chart-canva">
+                <canvas id="pieChartCanva"></canvas>
+            </div>
+
+            <button class="codeToggleButton" onclick="toggleCode('pie_chart_code', this)">Покажи кода</button>
+            <div id="pie_chart_code" class="hidden">
+                <h3>Създаване на данни:</h3>
+                <div class="code-container" name="code_pie_chart_data_creation">
+                    <pre>
+                    <span class="code-purple">var</span> <span class="code-lavender">chartData</span> = {
+                        &emsp;&emsp;<span class="code-pink">labels</span> <span class="code-green">['Средно', 'Бакалавър', 'Магистър']</span>,
+                        &emsp;&emsp;<span class="code-pink">datasets</span> [
+                        &emsp;&emsp;&emsp;&emsp;{
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">[157, 84, 43]</span>,
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">backgroundColor</span>: <span class="code-green">['#94618E','#FFC0CB', '#FFFF42']</span>, 
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">borderColor</span>: <span class="code-green">['#85517F','#F59FAE', '#EBEB3D']</span>, 
+                        &emsp;&emsp;
+                        &emsp;&emsp;&emsp;&emsp;}]
+                        &emsp;&emsp;};
+                </pre>
+                </div>
+
+                <h3>Създаване на опции</h3>
+                <div class="code-container" name="code_pie_chart_option_creation">
+                    <pre>
+                    <span class="code-purple">var</span> <span class="code-lavender">chartOptions</span> = {
+                        &emsp;&emsp;<span class="code-pink">responsive</span>: <span class="code-green">true</span>;
+                        &emsp;&emsp;<span class="code-pink">plugins</span>: {
+                        &emsp;&emsp;&emsp;&emsp;<span class="code-pink">legend:</span> {
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">position</span>: <span class="code-green">'bottom'</span>
+                        &emsp;&emsp;&emsp;&emsp;}
+                        &emsp;&emsp;}
+                    };
+                </pre>
+                </div>
+
+                <h3>Създаване на диаграмата</h3>
+                <div class="code-container" name="code_pie_chart_creation">
+                    <pre>
+                    <span class="code-purple">var</span> <span class="code-lavender">pieChart</span> = <span class="code-purple">new</span> <span class="code-lavender">Chart</span>(ctx, {
+                    &emsp;&emsp;<span class="code-pink">type</span>: <span class="code-green">'pie'</span>,
+                    &emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">chartData</span>,
+                    &emsp;&emsp;<span class="code-pink">options</span>: <span class="code-green">chartOptions</span>
+                    });
+                </pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="line_chart_content">
+            <h1>Линейна диаграма</h1>
+            <p>Този тип диаграма показва връзката между точки от данни с линии.
+                Употребява се за следене на тенденции в данните и промени във времето, както и за да се сравнят две
+                множества от данни.</p>
+            <h2 class="example">Пример</h2>
+            <p>Диаграмата от примера онагледява данни за приходите на утопична компания през различните месеци на
+                годината. (данните са измислени)</p>
+            <p><span class="bolded">Етикети</span>: ['Януари', 'Февруари', 'Март', 'Април', 'Май', 'Юни', 'Юли',
+                'Август', 'Септември', 'Октомври', 'Ноември', 'Декември']</p>
+            <p><span class="bolded">Етикет</span>: 'Приход на компанията в хиляди'</p>
+            <p><span class="bolded">Данни на множеството</span>: [157, 84, 43]</p>
+            <p>Избрани е 1 <span class="bolded">цвят</span> и е указано в <span class="bolded">опциите</span>, че
+                стойностите на графиката по оста Y трябва да започват от 0.</p>
+            <p>Примерен код за създаване на диаграмата може да намерите отдолу</p>
+            <div class="chart-canva">
+                <canvas id="lineChartCanva"></canvas>
+            </div>
+
+            <button class="codeToggleButton" onclick="toggleCode('line_chart_code', this)">Покажи кода</button>
+            <div id="line_chart_code" class="hidden">
+                <h3>Създаване на данни:</h3>
+                <div class="code-container" name="code_line_chart_data_creation">
+                    <pre>
+                    <span class="code-purple">var</span> <span class="code-lavender">chartData</span> = {
+                        &emsp;&emsp;<span class="code-pink">labels</span> <span class="code-green">['Януари', 'Февруари', 'Март', 'Април', 'Май', 'Юни', 'Юли', 'Август', 'Септември', 'Октомври', 'Ноември', 'Декември']</span>,
+                        &emsp;&emsp;<span class="code-pink">datasets</span> [
+                        &emsp;&emsp;&emsp;&emsp;{
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">label</span>: <span class="code-green">'Приход на компанията в хиляди'</span>,
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">[4, 6, 3, 7, 8, 11, 11, 13, 9, 4, 5, 7]</span>,
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">backgroundColor</span>: <span class="code-green">'#FFC0CB'</span>, 
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">borderColor</span>: <span class="code-green">'#F59FAE'</span>, 
+                        &emsp;&emsp;&emsp;&emsp;}
+                        &emsp;&emsp;]
+                    };
+                </pre>
+                </div>
+
+                <h3>Създаване на опции</h3>
+                <div class="code-container" name="code_line_chart_option_creation">
+                    <pre>
+                    <span class="code-purple">var</span> <span class="code-lavender">chartOptions</span> = {
+                        &emsp;&emsp;<span class="code-pink">scales</span>: {
+                        &emsp;&emsp;&emsp;&emsp;<span class="code-pink">y</span> {
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">beginAtZero</span>: <span class="code-green">true</span>
+                        &emsp;&emsp;&emsp;&emsp;}
+                        &emsp;&emsp;}
+                    };
+                </pre>
+                </div>
+
+                <h3>Създаване на диаграмата</h3>
+                <div class="code-container" name="code_line_chart_creation">
+                    <pre>
+                    <span class="code-purple">var</span> <span class="code-lavender">lineChart</span> = <span class="code-purple">new</span> <span class="code-lavender">Chart</span>(ctx, {
+                    &emsp;&emsp;<span class="code-pink">type</span>: <span class="code-green">'line'</span>,
+                    &emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">chartData</span>,
+                    &emsp;&emsp;<span class="code-pink">options</span>: <span class="code-green">chartOptions</span>
+                    });
+                </pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="mixed_chart_content">
+            <h1>Комбинирана диаграма</h1>
+            <p>Тези диаграми позволяват създаването на комбинации от два или повече различни типа диаграми.
+                Най-често се използват за смесване на колонна и линейна диаграма.
+                При създаването на комбинирана диаграма е нужно да укажем типа на диаграмата за всяко множество от
+                данни.</p>
+            <p></p>
+            <h2 class="example">Пример</h2>
+            <p>Диаграмата от примера представя информация за джобните, които група (нереални) ученици са изхарчили преди
+                Коледа и след Коледа. За целта се използват две множества от данни. (данните са измислени)</p>
+            <p><span class="bolded">Етикети</span>: ['Яна', 'Фифо', 'Мирела', 'Алекс', 'Мая']</p>
+            <p><span class="bolded">Етикет на първото множество</span>: 'Изхарчени пари преди Коледа'</p>
+            <p><span class="bolded">Етикет на второто множество</span>: 'Изхарчени пари след Коледа'</p>
+            <p><span class="bolded">Данните на двете множества</span> са както следва:</p>
+            <p><span class="bolded">Данни на първо множество</span>: [30, 50, 20, 40, 60]</p>
+            <p><span class="bolded">Данни на второ множество</span>: [50, 30, 40, 20, 60]</p>
+            <p>Избрани са 2 <span class="bolded">цвята</span> за двете различни множества и е указано в <span
+                    class="bolded">опциите</span>, че стойностите на графиката по оста Y трябва да започват от 0, а
+                легендата за диграмата трябва да се намира под нея.</p>
+            <p>Примерен код за създаване на диаграмата може да намерите отдолу</p>
+            <div class="chart-canva">
+                <canvas id="mixedChartCanva"></canvas>
+            </div>
+
+            <button class="codeToggleButton" onclick="toggleCode('mixed_chart_code', this)">Покажи кода</button>
+            <div id="mixed_chart_code" class="hidden">
+                <h3>Създаване на данни:</h3>
+                <div class="code-container" name="code_mixed_chart_data_creation">
+                    <pre>
+                    <span class="code-purple">var</span> <span class="code-lavender">chartData</span> = {
+                        &emsp;&emsp;<span class="code-pink">labels</span> <span class="code-green">['Яна', 'Фифо', 'Мирела', 'Алекс', 'Мая']</span>,
+                        &emsp;&emsp;<span class="code-pink">datasets</span> [
+                        &emsp;&emsp;&emsp;&emsp;{
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">label</span>: <span class="code-green">'Изхарчени пари преди Коледа'</span>,
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">type</span>: <span class="code-green">'bar'</span>,
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">[30, 50, 20, 40, 60]</span>,
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">backgroundColor</span>: <span class="code-green">'rgba(75, 192, 192, 0.6)'</span>, 
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">borderColor</span>: <span class="code-green">'rgba(75, 192, 192, 1)'</span>, 
+                        &emsp;&emsp;
+                        &emsp;&emsp;&emsp;&emsp;}
+                        &emsp;&emsp;&emsp;&emsp;{
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">label</span>: <span class="code-green">'Изхарчени пари след Коледа'</span>,
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">type</span>: <span class="code-green">'line'</span>,
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">[50, 30, 40, 20, 60]</span>,
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">borderColor</span>: <span class="code-green">'rgba(255, 99, 132, 1)'</span>, 
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">pointRadius</span>: <span class="code-green">5</span>, 
+                        &emsp;&emsp;&emsp;&emsp;}
+                        &emsp;&emsp;]
+                    };
+                </pre>
+                </div>
+
+                <h3>Създаване на опции</h3>
+                <div class="code-container" name="code_mixed_chart_option_creation">
+                    <pre>
+                    <span class="code-purple">var</span> <span class="code-lavender">chartOptions</span> = {
+                        &emsp;&emsp;<span class="code-pink">scales</span>: {
+                        &emsp;&emsp;&emsp;&emsp;<span class="code-pink">y</span> {
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">beginAtZero</span>: <span class="code-green">true</span>
+                        &emsp;&emsp;&emsp;&emsp;}
+                        &emsp;&emsp;},
+                        &emsp;&emsp;<span class="code-pink">plugins</span>: {
+                        &emsp;&emsp;&emsp;&emsp;<span class="code-pink">legend:</span> {
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">position</span>: <span class="code-green">'bottom'</span>
+                        &emsp;&emsp;&emsp;&emsp;}
+                        &emsp;&emsp;}
+                    };
+                </pre>
+                </div>
+
+                <h3>Създаване на диаграмата</h3>
+                <div class="code-container" name="code_mixed_chart_creation">
+                    <pre>
+                    <span class="code-purple">var</span> <span class="code-lavender">mixedChart</span> = <span class="code-purple">new</span> <span class="code-lavender">Chart</span>(ctx, {
+                    &emsp;&emsp;<span class="code-pink">type</span>: <span class="code-green">'bar'</span>,
+                    &emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">chartData</span>,
+                    &emsp;&emsp;<span class="code-pink">options</span>: <span class="code-green">chartOptions</span>
+                    });
+                </pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="polar_area_chart_content">
+            <h1>Полярна диаграма</h1>
+            <p>Тези диаграми визуализират данните като радиални сектори, излъчвани от центъра.
+                Приличат на пай диаграмите, но тук всеки сегмент има един и същ ъгъл, а радиусът се определя в
+                зависимост от стойността.
+                Често се използват, за да се сравнят данни, като едновременно с това се показва мащаба от стойности за
+                контекст.
+            </p>
+            <h2 class="example">Пример</h2>
+            <p>Диаграмата от примера дава информация за годините на вероятно съществуащи хора. (данните са измислени)
+            </p>
+            <p><span class="bolded">Етикети</span>: ['Иван', 'Алекс', 'Мария', 'Лили', 'Криси']</p>
+            <p><span class="bolded">Данни на множеството</span>: [17, 35, 21, 43, 28]</p>
+            <p>Избрани са няколко <span class="bolded">цвята</span> и е указано в <span class="bolded">опциите</span>,
+                че тиковете трябва да започват от 0, а легендата за диаграмата трябва да е ситуирана под нея.</p>
+            <p>Примерен код за създаване на диаграмата може да намерите отдолу</p>
+            <div class="chart-canva">
+                <canvas id="polarAreaChartCanva"></canvas>
+            </div>
+
+            <button class="codeToggleButton" onclick="toggleCode('polar_area_chart_code', this)">Покажи кода</button>
+            <div id="polar_area_chart_code" class="hidden">
+                <h3>Създаване на данни:</h3>
+                <div class="code-container" name="code_polar_area_chart_data_creation">
+                    <pre>
+                    <span class="code-purple">var</span> <span class="code-lavender">chartData</span> = {
+                        &emsp;&emsp;<span class="code-pink">labels</span> <span class="code-green">['Иван', 'Алекс', 'Мария', 'Лили', 'Криси']</span>,
+                        &emsp;&emsp;<span class="code-pink">datasets</span> [
+                        &emsp;&emsp;&emsp;&emsp;{
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">[17, 35, 21, 43, 28]</span>,
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">backgroundColor</span>: <span class="code-green">['#BB6CE6', '#AF9FF5', '#67E07F', '#F2E335', '#FFC0CB']</span>, 
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">borderColor</span>: <span class="code-green">['#9654BA', '#877AC2', '#50AD62', '#D6C82D', '#F59FAE']</span>, 
+                        &emsp;&emsp;
+                        &emsp;&emsp;&emsp;&emsp;}]
+                        &emsp;&emsp;};
+                </pre>
+                </div>
+
+                <h3>Създаване на опции</h3>
+                <div class="code-container" name="code_polar_area_chart_option_creation">
+                    <pre>
+                    <span class="code-purple">var</span> <span class="code-lavender">chartOptions</span> = {
+                        &emsp;&emsp;<span class="code-pink">responsive</span>: <span class="code-green">true</span>;
+                        &emsp;&emsp;<span class="code-pink">scale</span>: {
+                        &emsp;&emsp;&emsp;&emsp;<span class="code-pink">ticks:</span> {
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">beginAtZero</span>: <span class="code-green">true</span>
+                        &emsp;&emsp;&emsp;&emsp;}
+                        &emsp;&emsp;},
+                        &emsp;&emsp;<span class="code-pink">plugins</span>: {
+                        &emsp;&emsp;&emsp;&emsp;<span class="code-pink">legend:</span> {
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">position</span>: <span class="code-green">'bottom'</span>
+                        &emsp;&emsp;&emsp;&emsp;}
+                        &emsp;&emsp;}
+                    };
+                </pre>
+                </div>
+
+                <h3>Създаване на диаграмата</h3>
+                <div class="code-container" name="code_polar_area_chart_creation">
+                    <pre>
+                    <span class="code-purple">var</span> <span class="code-lavender">polarAreaChart</span> = <span class="code-purple">new</span> <span class="code-lavender">Chart</span>(ctx, {
+                    &emsp;&emsp;<span class="code-pink">type</span>: <span class="code-green">'polar'</span>,
+                    &emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">chartData</span>,
+                    &emsp;&emsp;<span class="code-pink">options</span>: <span class="code-green">chartOptions</span>
+                    });
+                </pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="radar_chart_content">
+            <h1>Радарна диаграма</h1>
+            <p>Чрез този вид диаграми могат да бъдат показани множество от точки с данни и вариациите между тях.
+                Полезни са, когато се цели сравняване на точки от две или повече различни множества от данни.</p>
+            <h2 class="example">Пример</h2>
+            <p>Диаграмата от примера представя оценките на Иван и Мария (сигурно съществуват) по различните езици, които
+                изучават в училище (Това е стабилен езиков профил!!!). За целта се използват две множества от данни.
+                (данните са измислени)</p>
+            <p><span class="bolded">Етикети</span>: ['Български', 'Английски', 'Немски', 'Испански', 'Френски']</p>
+            <p><span class="bolded">Етикет на първото множество</span>: 'Оценки на Иван'</p>
+            <p><span class="bolded">Етикет на второто множество</span>: 'Оценки на Мария'</p>
+            <p><span class="bolded">Данните на двете множества</span> са както следва:</p>
+            <p><span class="bolded">Данни на първо множество</span>: [3, 5, 2, 4, 6]</p>
+            <p><span class="bolded">Данни на второ множество</span>: [5, 4, 3, 2, 1]</p>
+            <p>Избрани са <span class="bolded">цветове</span> за двете различни множества, техните точки, границите на
+                техните точки и радиуса им. Указано е в <span class="bolded">опциите</span>, че тиковете трябва да
+                започват от 0 и легендата на диаграмата трябва да е под нея.</p>
+            <p>Примерен код за създаване на диаграмата може да намерите отдолу</p>
+            <div class="chart-canva">
+                <canvas id="radarChartCanva"></canvas>
+            </div>
+
+            <button class="codeToggleButton" onclick="toggleCode('radar_chart_code', this)">Покажи кода</button>
+            <div id="radar_chart_code" class="hidden">
+                <h3>Създаване на данни:</h3>
+                <div class="code-container" name="code_radar_chart_data_creation">
+                    <pre>
+                    <span class="code-purple">var</span> <span class="code-lavender">chartData</span> = {
+                        &emsp;&emsp;<span class="code-pink">labels</span> <span class="code-green">['Български', 'Английски', 'Немски', 'Испански', 'Френски']</span>,
+                        &emsp;&emsp;<span class="code-pink">datasets</span> [
+                        &emsp;&emsp;&emsp;&emsp;{
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">label</span>: <span class="code-green">'Оценки на Иван'</span>,
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">[3, 5, 2, 4, 6]</span>,
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">backgroundColor</span>: <span class="code-green">'rgba(255, 99, 132, 0.6)'</span>, 
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">borderColor</span>: <span class="code-green">'rgba(255, 99, 132, 1)'</span>, 
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">pointBackgroundColor</span>: <span class="code-green">'rgba(255, 99, 132, 1)'</span>, 
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">pointBorderColor</span>: <span class="code-green">'#fff'</span>, 
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">pointRadius</span>: <span class="code-green">5</span>, 
+                        &emsp;&emsp;&emsp;&emsp;}
+                        &emsp;&emsp;&emsp;&emsp;{
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">label</span>: <span class="code-green">'Оценки на Мария'</span>,
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">[5, 4, 3, 2, 1]</span>,
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">backgroundColor</span>: <span class="code-green">'rgba(54, 162, 235, 0.2)'</span>, 
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">borderColor</span>: <span class="code-green">'rgb(54, 162, 235)'</span>, 
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">pointBackgroundColor</span>: <span class="code-green">'rgb(54, 162, 235)'</span>, 
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">pointBorderColor</span>: <span class="code-green">'#fff'</span>, 
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">pointRadius</span>: <span class="code-green">5</span>, 
+                        &emsp;&emsp;
+                        &emsp;&emsp;&emsp;&emsp;}
+                        &emsp;&emsp;]
+                    };
+                </pre>
+                </div>
+
+                <h3>Създаване на опции</h3>
+                <div class="code-container" name="code_radar_chart_option_creation">
+                    <pre>
+                    <span class="code-purple">var</span> <span class="code-lavender">chartOptions</span> = {
+                        &emsp;&emsp;<span class="code-pink">responsive</span>: <span class="code-green">true</span>;
+                        &emsp;&emsp;<span class="code-pink">scale</span>: {
+                        &emsp;&emsp;&emsp;&emsp;<span class="code-pink">ticks:</span> {
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">beginAtZero</span>: <span class="code-green">true</span>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">max</span>: <span class="code-green">80</span>
+                        &emsp;&emsp;&emsp;&emsp;}
+                        &emsp;&emsp;},
+                        &emsp;&emsp;<span class="code-pink">plugins</span>: {
+                        &emsp;&emsp;&emsp;&emsp;<span class="code-pink">legend:</span> {
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">position</span>: <span class="code-green">'bottom'</span>
+                        &emsp;&emsp;&emsp;&emsp;}
+                        &emsp;&emsp;}
+                    };
+                </pre>
+                </div>
+
+                <h3>Създаване на диаграмата</h3>
+                <div class="code-container" name="code_radar_chart_creation">
+                    <pre>
+                    <span class="code-purple">var</span> <span class="code-lavender">radarChart</span> = <span class="code-purple">new</span> <span class="code-lavender">Chart</span>(ctx, {
+                    &emsp;&emsp;<span class="code-pink">type</span>: <span class="code-green">'radar'</span>,
+                    &emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">chartData</span>,
+                    &emsp;&emsp;<span class="code-pink">options</span>: <span class="code-green">chartOptions</span>
+                    });
+                </pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="scatter_chart_content">
+            <h1>Точкова диаграма</h1>
+            <p>Точковите диаграми наподобяват балонените диаграми, но тук елементите имат само 2 измерения и те
+                определят тяхната локация.
+                Тук е важно данните да се подават като обекти, които съдържат полета X и Y.
+                Подходящи са за представяне на връзки между две променливи.</p>
+            <h2 class="example">Пример</h2>
+            <p>Диаграмата от примера показва как биха били разположени точките от едно измислено множество. (данните са
+                измислени)</p>
+            <p><span class="bolded">Етикет</span>: 'Координати на точки'</p>
+            <p><span class="bolded">Данни на множеството</span>: [{x: 7, y: 15}, {x: 13, y: 27}, {x: 27, y: 21}, {x: 34,
+                y: 16}, {x: 42, y: 17}]</p>
+            <p>Избрани е 1 <span class="bolded">цвят</span> и е указано в <span class="bolded">опциите</span>, че осите
+                Х и Y са от линеен тип и се позиционират съответно отдолу и отляво.</p>
+            <p>Примерен код за създаване на диаграмата може да намерите отдолу</p>
+            <div class="chart-canva">
+                <canvas id="scatterChartCanva"></canvas>
+            </div>
+
+            <button class="codeToggleButton" onclick="toggleCode('scatter_chart_code', this)">Покажи кода</button>
+            <div id="scatter_chart_code" class="hidden">
+                <h3>Създаване на данни:</h3>
+                <div class="code-container" name="code_scatter_chart_data_creation">
+                    <pre>
+                    <span class="code-purple">var</span> <span class="code-lavender">chartData</span> = {
+                        &emsp;&emsp;<span class="code-pink">datasets</span> [
+                        &emsp;&emsp;&emsp;&emsp;{
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">label</span>: <span class="code-green">'Координати на точки'</span>,
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">data</span>: [
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{<span class="code-lavender">x</span>: <span class="code-green">7</span>, <span class="code-lavender">y</span>: <span class="code-green">15</span>}, 
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{<span class="code-lavender">x</span>: <span class="code-green">13</span>, <span class="code-lavender">y</span>: <span class="code-green">27</span>},
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{<span class="code-lavender">x</span>: <span class="code-green">27</span>, <span class="code-lavender">y</span>: <span class="code-green">21</span>},
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{<span class="code-lavender">x</span>: <span class="code-green">34</span>, <span class="code-lavender">y</span>: <span class="code-green">16</span>},
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{<span class="code-lavender">x</span>: <span class="code-green">42</span>, <span class="code-lavender">y</span>: <span class="code-green">17</span>},
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;],
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">backgroundColor</span>: <span class="code-green">'#94618E'</span>, 
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">borderColor</span>: <span class="code-green">'purple'</span>, 
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">pointRadius</span>: <span class="code-green">6'</span>, 
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">pointHoverRadius</span>: <span class="code-green">6'</span>, 
+                        &emsp;&emsp;&emsp;&emsp;}
+                        &emsp;&emsp;]
+                    };
+                </pre>
+                </div>
+
+                <h3>Създаване на опции</h3>
+                <div class="code-container" name="code_scatter_chart_option_creation">
+                    <pre>
+                    <span class="code-purple">var</span> <span class="code-lavender">chartOptions</span> = {
+                        &emsp;&emsp;<span class="code-pink">scales</span>: {
+                        &emsp;&emsp;&emsp;&emsp;<span class="code-pink">x: </span> {
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">type</span>: <span class="code-green">'linear'</span>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">position</span>: <span class="code-green">'bottom'</span>
+                        &emsp;&emsp;&emsp;&emsp;},
+                        &emsp;&emsp;&emsp;&emsp;<span class="code-pink">y: </span> {
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">type</span>: <span class="code-green">'linear'</span>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="code-pink">position</span>: <span class="code-green">'left'</span>
+                        &emsp;&emsp;&emsp;&emsp;}
+                        &emsp;&emsp;},
+                    };
+                </pre>
+                </div>
+
+                <h3>Създаване на диаграмата</h3>
+                <div class="code-container" name="code_scatter_chart_creation">
+                    <pre>
+                    <span class="code-purple">var</span> <span class="code-lavender">scatterChart</span> = <span class="code-purple">new</span> <span class="code-lavender">Chart</span>(ctx, {
+                    &emsp;&emsp;<span class="code-pink">type</span>: <span class="code-green">'scatter'</span>,
+                    &emsp;&emsp;<span class="code-pink">data</span>: <span class="code-green">chartData</span>,
+                    &emsp;&emsp;<span class="code-pink">options</span>: <span class="code-green">chartOptions</span>
+                    });
+                </pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="mistakes_content" onclick="toggleParagraphs(event)">
+            <h1>Често допускани грешки &#9746;</h1>
+
+            <h3 onclick="toggleParagraph(this)">&#10163;Недостатъчна валидация на данни</h3>
+            <p class="collapsable">Ако данните ни не са проверени, валидирани и в изчистен вид, това може да доведе до
+                неочаквани поведения.
+                Винаги трябва да подаваме данните си в правилен формат и да се убедим, че в тях няма грешки.
+            </p>
+
+            <h3 onclick="toggleParagraph(this)">&#10163;Преизползване или неправилен подбор на определен вид диаграма
+            </h3>
+            <p class="collapsable">Неправилният избор на диаграма за наличните данни може да доведе до грешки в
+                интерпретацията. Chart.js предоставя разнообразие от диаграми, но всяка е предвидена за разлина употреба
+                и сценарий. </p>
+
+            <h3 onclick="toggleParagraph(this)">&#10163;Несъобразяване с достъпността</h3>
+            <p class="collapsable">Ако не подсигурим алтернативен текст за нетекстово съдържание или не използваме ARIA
+                атрибути, диаграмите
+                ще бъдат недостъпни за потребители с увреждания</p>
+
+            <h3 onclick="toggleParagraph(this)">&#10163;Прекалено усложняване на диаграмите</h3>
+            <p class="collapsable">Препълването на диаграмите с излишни елементи, етикети или данни може да доведе до
+                объркване. Диаграмите по
+                правило трябва да са семпли и да се фокусират над това да предадат важната част от информацията</p>
+
+            <h3 onclick="toggleParagraph(this)">&#10163;Неизползване на легенди</h3>
+            <p class="collapsable">Липсата на легенда в диаграмата може да обърка потребителите и те да не могат да
+                разберат значението на
+                различните елементи. Легендата внася яснота, която спомага да се избегне тази ситуация.</p>
+
+            <h3 onclick="toggleParagraph(this)">&#10163;Грешки в конфигурацията</h3>
+            <p class="collapsable">Неправилното конфигуриране на настройките може да породи затруднения в разбирането на
+                данните.</p>
+
+            <h3 onclick="toggleParagraph(this)">&#10163;Пренебрегване на ъпдейти на версията</h3>
+            <p class="collapsable">Това може да причини грешки, изпускане на поправки на бъгове и подобрения. Добра идея
+                е редовно да се
+                проверява за ъпдейти и да се ревизира кода.</p>
+
+            <h3 onclick="toggleParagraph(this)">&#10163;Неправилен избор на цветове</h3>
+            <p class="collapsable">Изборът на неподходящи цветове може да повлияе негативно на визуализацията,
+                четимостта и разбирането на
+                данните.</p>
+
+            <h3 onclick="toggleParagraph(this)">&#10163;Пренебрегване на точността на данните</h3>
+            <p class="collapsable">Неточните данни могат водят до подвеждащи визуализации и объркване. Винаги трябва да
+                се следи за точността
+                на данните.</p>
+
+            <h3 onclick="toggleParagraph(this)">&#10163;Неправилна конфигурация на осите и мащабите</h3>
+            <p class="collapsable">Неправилното нагласяне на осите и мащабите може да доведе до разтеглене, неточни или
+                подвеждащи диаграми.</p>
+
+            <h3 onclick="toggleParagraph(this)">&#10163;Пренебрегване на представянето</h3>
+            <p class="collapsable">Големите множества от данни могат да окажат сериозно влияние върху представянето и
+                рендерирането. </p>
+        </div>
+
+        <div id="tips_content" onclick="toggleParagraphs(event)">
+            <h1>Добри практики &#9745;</h1>
+
+            <h3 onclick="toggleParagraph(this)">&#10163;Разбиране на данните</h3>
+            <p class="collapsable">Важно е да се разберат правилно данните. Само така може да се избере правилният
+                вид диаграма за тяхното представяне, така че ефективно да бъде предадена нужната информация.</p>
+
+            <h3 onclick="toggleParagraph(this)">&#10163;Избягване на излишно усложняване</h3>
+            <p class="collapsable">Не е добра идея да има прекалено много елементи и да се усложняват излишно
+                данните и визуализацията им. Изборът на минимален брой видове диаграми и елементи спомага за
+                по-лесно разбиране и избягване на визуално претоварване.</p>
+
+            <h3 onclick="toggleParagraph(this)">&#10163;Осигуряване на контекст</h3>
+            <p class="collapsable">Включването на етикети, заглавия и легенди осигурява контекст и прави таблиците
+                по-разбираеми и четими.</p>
+
+            <h3 onclick="toggleParagraph(this)">&#10163;Правилен подбор на цветове</h3>
+            <p class="collapsable">Цветовете трябва да се възприемат лесно и да спомагат за ефективната комуникация
+                на данни. Препоръчително е изборът на цветова гама да бъде съобразен с всички потребители,
+                включително и тези със зрителни смущения</p>
+
+            <h3 onclick="toggleParagraph(this)">&#10163;Използване на интерактивност</h3>
+            <p class="collapsable">Инструментите за интерактивност осигуряват допълнителна информация на
+                потребителите, когато те взаимодействат с данните. Това улеснява разбирането.</p>
+
+            <h3 onclick="toggleParagraph(this)">&#10163;Точност на данните</h3>
+            <p class="collapsable">Винаги трябва да се проверява за точност на данните. Те не трябва да бъдат
+                подвеждащи или да съдържат грешки.</p>
+
+            <h3 onclick="toggleParagraph(this)">&#10163;Обръщане на внимание на представянето</h3>
+            <p class="collapsable">Работата с големи множества от данни може изключително много да забави
+                рендерирането на данни, а оттам и да се влоши представянето. Добре е да се помисли за оптимизации,
+                агрегация на данни или обработване от страна на сървъра при необходимост.</p>
+
+            <h3 onclick="toggleParagraph(this)">&#10163;Персонализация</h3>
+            <p class="collapsable">Chart.js предоставя възможност за персонализация на много нива. Добавянето на
+                индивидуални щрихи е препоръчително.</p>
+
+            <h3 onclick="toggleParagraph(this)">&#10163;Достъпност</h3>
+            <p class="collapsable">Важно е да се вземат в предвид всички потребители и данните да бъдат достъпни за
+                всички. Освен това трябва да се внимава за достъпността на елементите и данните.</p>
+
+            <h3 onclick="toggleParagraph(this)">&#10163;Използване на документация</h3>
+            <p class="collapsable">Chart.js има обширна документация. Цялата нужна информация се намира там, не се
+                страхувайте да я използвате за напътствия. Освен това, в нея са предоставени и много примери.</p>
+
+            <h3 onclick="toggleParagraph(this)">&#10163;Тестване</h3>
+            <p class="collapsable">За да се подсигури консистентно поведението на диаграмите, те трябва да бъдат
+                тествани в контекста на различни браузъри и устройства. </p>
+
+        </div>
+
+        <div id="resources_content">
+            <h1>Използвани ресурси</h1>
+            <p>[1] Navbar icon, "font-awesome"; <span class="bolded">линк:</span> <a
+                    href="https://fontawesome.com/">https://fontawesome.com/</a>, version: 6.5.1</p>
+            <p>[2] Документация на библиотеката Chart.js, <span class="bolded">линк:</span>: <a
+                    href="https://www.chartjs.org/docs/latest/charts/area.html">https://www.chartjs.org/docs/latest/charts/area.html</a>
+                ; <span class="bolded">последно посетена</span>: 10.12.2023</p>
+            <p>[4] <span class="bolded">Статия</span>: What are some common mistakes to avoid when using Chart.js for
+                Data Visualization?; <span class="bolded">автор</span>: <a
+                    href="https://www.linkedin.com/showcase/skills-data-visualization/posts/?feedView=all">Data
+                    Visualization</a>; <span class="bolded">линк</span>: <a
+                    href="https://www.linkedin.com/advice/0/1-what-some-common-mistakes-avoid-when-using">https://www.linkedin.com/advice/0/1-what-some-common-mistakes-avoid-when-using</a>
+                ; <span class="bolded">последно посетена</span>: 10.12.2023 </p>
+            <p>[5] <span class="bolded">Статия</span>: How can you make your Chart.js visualizations accessible to
+                people with disabilities?; <span class="bolded">автор</span>: <a
+                    href="https://www.linkedin.com/showcase/skills-data-visualization/posts/?feedView=all">Data
+                    Visualization</a>; <span class="bolded">линк</span>: <a
+                    href="https://www.linkedin.com/advice/3/how-can-you-make-your-chartjs-visualizations">https://www.linkedin.com/advice/3/how-can-you-make-your-chartjs-visualizations</a>
+                ; <span class="bolded">последно посетена</span>: 10.12.2023</p>
+            <p>[6] <span class="bolded">Статия</span> <a
+                    href="https://www.sitepoint.com/creating-beautiful-charts-chart-js/">Creating Beautiful Charts with
+                    Chart.js</a>; <span class="bolded">автор</span>: Aurelio De Rosa; <span class="bolded">последно
+                    посетена</span>: 10.12.2023</p>
+        </div>
+    </div>
+
+    <script src="javascript/area_chart.js"></script>
+    <script src="javascript/bar_chart.js"></script>
+    <script src="javascript/bubble_chart.js"></script>
+    <script src="javascript/doughnut_chart.js"></script>
+    <script src="javascript/pie_chart.js"></script>
+    <script src="javascript/line_chart.js"></script>
+    <script src="javascript/mixed_chart.js"></script>
+    <script src="javascript/polar_chart.js"></script>
+    <script src="javascript/radar_chart.js"></script>
+    <script src="javascript/scatter_chart.js"></script>
+
+</body>
+
+</html>

@@ -33,3 +33,15 @@ function toggleParagraph(clickedHeading) {
         paragraph.style.display = 'block';
     }
 }
+
+function toggleCode(elementId, button) {
+    var codeElement = document.getElementById(elementId);
+  
+    if (codeElement.style.display === 'none') {
+      codeElement.style.display = 'block';
+      button.textContent = 'Скрий кода';
+    } else {
+      codeElement.style.display = 'none';
+      button.textContent = 'Покажи кода';
+    }
+}
